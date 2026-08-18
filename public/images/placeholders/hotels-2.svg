@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1200" width="1600" height="1200">
+  <defs>
+    <linearGradient id="bg-12" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#faf9f5" />
+      <stop offset="1" stop-color="#f2f0e8" />
+    </linearGradient>
+    <filter id="grain-12">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" result="noise" />
+      <feColorMatrix in="noise" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.03 0" />
+    </filter>
+  </defs>
+  <rect width="1600" height="1200" fill="url(#bg-12)" />
+  <circle cx="1170.6622810450672" cy="402.0706487009631" r="94.05601979422198" fill="none" stroke="#b7312f" stroke-width="1.5" opacity="0.5" />
+  <path d="M98.35328418374368,1032 L98.35328418374368,501.4379413178058 A168.313382482923,168.313382482923 0 0 1 434.9800491495897,501.4379413178058 L434.9800491495897,1032" fill="none" stroke="#b7312f" stroke-width="2" opacity="0.17" /><path d="M634.7824732314093,1032 L634.7824732314093,487.3850128635384 A165.21752676859074,165.21752676859074 0 0 1 965.2175267685907,487.3850128635384 L965.2175267685907,1032" fill="none" stroke="#14120f" stroke-width="2" opacity="0.12" /><path d="M1149.1427725316692,1032 L1149.1427725316692,706.4839701465412 A184.19056080166433,184.19056080166433 0 0 1 1517.5238941349978,706.4839701465412 L1517.5238941349978,1032" fill="none" stroke="#14120f" stroke-width="2" opacity="0.16" />
+  <line x1="0" y1="1060" x2="1600" y2="1060" stroke="#14120f" stroke-width="1" opacity="0.15" />
+  <text x="80" y="1110" font-family="Georgia, 'Shippori Mincho', serif" font-size="30" fill="#14120f" opacity="0.85">マディナ・ジュメイラ</text>
+  <text x="80" y="1144" font-family="Helvetica, Arial, sans-serif" font-size="14" letter-spacing="4" fill="#b7312f">HOTELS</text>
+  <rect width="1600" height="1200" filter="url(#grain-12)" opacity="0.6" />
+</svg>

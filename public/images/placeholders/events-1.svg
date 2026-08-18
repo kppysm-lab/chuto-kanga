@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1200" width="1600" height="1200">
+  <defs>
+    <linearGradient id="bg-41" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#14120f" />
+      <stop offset="1" stop-color="#1f1c17" />
+    </linearGradient>
+    <filter id="grain-41">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" result="noise" />
+      <feColorMatrix in="noise" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.03 0" />
+    </filter>
+  </defs>
+  <rect width="1600" height="1200" fill="url(#bg-41)" />
+  <circle cx="1368.979179483363" cy="465.59149938895905" r="82.09245682325795" fill="none" stroke="#b7312f" stroke-width="1.5" opacity="0.5" />
+  <path d="M122.78224944577036,1032 L122.78224944577036,456.0504125990209 A143.88441722089632,143.88441722089632 0 0 1 410.551083887563,456.0504125990209 L410.551083887563,1032" fill="none" stroke="#b7312f" stroke-width="2" opacity="0.17" /><path d="M647.3838472276541,1032 L647.3838472276541,631.0210952617638 A152.61615277234597,152.61615277234597 0 0 1 952.6161527723459,631.0210952617638 L952.6161527723459,1032" fill="none" stroke="#faf9f5" stroke-width="2" opacity="0.14" /><path d="M1181.585871370006,1032 L1181.585871370006,610.5680986803809 A151.74746196332737,151.74746196332737 0 0 1 1485.0807952966609,610.5680986803809 L1485.0807952966609,1032" fill="none" stroke="#faf9f5" stroke-width="2" opacity="0.14" />
+  <line x1="0" y1="1060" x2="1600" y2="1060" stroke="#faf9f5" stroke-width="1" opacity="0.15" />
+  <text x="80" y="1110" font-family="Georgia, 'Shippori Mincho', serif" font-size="30" fill="#faf9f5" opacity="0.85">アル・ウラ・アート・フェスティバル</text>
+  <text x="80" y="1144" font-family="Helvetica, Arial, sans-serif" font-size="14" letter-spacing="4" fill="#b7312f">EVENTS</text>
+  <rect width="1600" height="1200" filter="url(#grain-41)" opacity="0.6" />
+</svg>

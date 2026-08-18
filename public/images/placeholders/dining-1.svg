@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1200" width="1600" height="1200">
+  <defs>
+    <linearGradient id="bg-21" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#faf9f5" />
+      <stop offset="1" stop-color="#f2f0e8" />
+    </linearGradient>
+    <filter id="grain-21">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" result="noise" />
+      <feColorMatrix in="noise" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.03 0" />
+    </filter>
+  </defs>
+  <rect width="1600" height="1200" fill="url(#bg-21)" />
+  <circle cx="1369.6350403845474" cy="383.22308351808374" r="90.5133819675601" fill="none" stroke="#b7312f" stroke-width="1.5" opacity="0.5" />
+  <path d="M63.64612960053893,1032 L63.64612960053893,497.45681089975716 A96.35387039946107,96.35387039946107 0 0 1 256.3538703994611,497.45681089975716 L256.3538703994611,1032" fill="none" stroke="#b7312f" stroke-width="2" opacity="0.12" /><path d="M371.7108726369733,1032 L371.7108726369733,485.6351289179341 A108.28912736302668,108.28912736302668 0 0 1 588.2891273630266,485.6351289179341 L588.2891273630266,1032" fill="none" stroke="#14120f" stroke-width="2" opacity="0.09" /><path d="M697.9883422749062,1032 L697.9883422749062,433.64467445837556 A102.01165772509373,102.01165772509373 0 0 1 902.0116577250938,433.64467445837556 L902.0116577250938,1032" fill="none" stroke="#14120f" stroke-width="2" opacity="0.13" /><path d="M1015.9130859262837,1032 L1015.9130859262837,480.25105279695754 A104.08691407371634,104.08691407371634 0 0 1 1224.0869140737163,480.25105279695754 L1224.0869140737163,1032" fill="none" stroke="#b7312f" stroke-width="2" opacity="0.11" /><path d="M1350.354187007227,1032 L1350.354187007227,514.3548278372525 A89.64581299277293,89.64581299277293 0 0 1 1529.645812992773,514.3548278372525 L1529.645812992773,1032" fill="none" stroke="#14120f" stroke-width="2" opacity="0.14" />
+  <line x1="0" y1="1060" x2="1600" y2="1060" stroke="#14120f" stroke-width="1" opacity="0.15" />
+  <text x="80" y="1110" font-family="Georgia, 'Shippori Mincho', serif" font-size="30" fill="#14120f" opacity="0.85">ベイルートの食卓</text>
+  <text x="80" y="1144" font-family="Helvetica, Arial, sans-serif" font-size="14" letter-spacing="4" fill="#b7312f">DINING</text>
+  <rect width="1600" height="1200" filter="url(#grain-21)" opacity="0.6" />
+</svg>

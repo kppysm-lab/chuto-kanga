@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1200" width="1600" height="1200">
+  <defs>
+    <linearGradient id="bg-22" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#14120f" />
+      <stop offset="1" stop-color="#1f1c17" />
+    </linearGradient>
+    <filter id="grain-22">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" result="noise" />
+      <feColorMatrix in="noise" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.03 0" />
+    </filter>
+  </defs>
+  <rect width="1600" height="1200" fill="url(#bg-22)" />
+  <circle cx="1154.0017433175824" cy="351.90116877104214" r="92.22018302521677" fill="none" stroke="#b7312f" stroke-width="1.5" opacity="0.5" />
+  <path d="M115.5319865461743,1032 L115.5319865461743,655.7907713228483 A151.1346801204924,151.1346801204924 0 0 1 417.8013467871591,655.7907713228483 L417.8013467871591,1032" fill="none" stroke="#b7312f" stroke-width="2" opacity="0.09" /><path d="M626.140607179208,1032 L626.140607179208,522.2578724372471 A173.859392820792,173.859392820792 0 0 1 973.859392820792,522.2578724372471 L973.859392820792,1032" fill="none" stroke="#faf9f5" stroke-width="2" opacity="0.11" /><path d="M1182.5691858846242,1032 L1182.5691858846242,601.5493322729828 A150.7641474487093,150.7641474487093 0 0 1 1484.0974807820428,601.5493322729828 L1484.0974807820428,1032" fill="none" stroke="#faf9f5" stroke-width="2" opacity="0.14" />
+  <line x1="0" y1="1060" x2="1600" y2="1060" stroke="#faf9f5" stroke-width="1" opacity="0.15" />
+  <text x="80" y="1110" font-family="Georgia, 'Shippori Mincho', serif" font-size="30" fill="#faf9f5" opacity="0.85">リヤドの新星</text>
+  <text x="80" y="1144" font-family="Helvetica, Arial, sans-serif" font-size="14" letter-spacing="4" fill="#b7312f">DINING</text>
+  <rect width="1600" height="1200" filter="url(#grain-22)" opacity="0.6" />
+</svg>

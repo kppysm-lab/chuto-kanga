@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1200" width="1600" height="1200">
+  <defs>
+    <linearGradient id="bg-51" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#faf9f5" />
+      <stop offset="1" stop-color="#f2f0e8" />
+    </linearGradient>
+    <filter id="grain-51">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" result="noise" />
+      <feColorMatrix in="noise" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.03 0" />
+    </filter>
+  </defs>
+  <rect width="1600" height="1200" fill="url(#bg-51)" />
+  <circle cx="1223.5260887479064" cy="451.07069783800785" r="81.6389560753661" fill="none" stroke="#b7312f" stroke-width="1.5" opacity="0.5" />
+  <path d="M116.2991603136214,1032 L116.2991603136214,634.0650308799923 A150.3675063530453,150.3675063530453 0 0 1 417.03417301971194,634.0650308799923 L417.03417301971194,1032" fill="none" stroke="#b7312f" stroke-width="2" opacity="0.09" /><path d="M615.0381215172997,1032 L615.0381215172997,643.8383072930567 A184.96187848270029,184.96187848270029 0 0 1 984.9618784827003,643.8383072930567 L984.9618784827003,1032" fill="none" stroke="#14120f" stroke-width="2" opacity="0.10" /><path d="M1169.4326813873367,1032 L1169.4326813873367,661.3059532642237 A163.9006519459967,163.9006519459967 0 0 1 1497.2339852793302,661.3059532642237 L1497.2339852793302,1032" fill="none" stroke="#14120f" stroke-width="2" opacity="0.17" />
+  <line x1="0" y1="1060" x2="1600" y2="1060" stroke="#14120f" stroke-width="1" opacity="0.15" />
+  <text x="80" y="1110" font-family="Georgia, 'Shippori Mincho', serif" font-size="30" fill="#14120f" opacity="0.85">ジェッダ・ビエンナーレ</text>
+  <text x="80" y="1144" font-family="Helvetica, Arial, sans-serif" font-size="14" letter-spacing="4" fill="#b7312f">ART &amp; CULTURE</text>
+  <rect width="1600" height="1200" filter="url(#grain-51)" opacity="0.6" />
+</svg>

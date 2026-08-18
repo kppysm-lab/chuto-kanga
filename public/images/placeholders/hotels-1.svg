@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1200" width="1600" height="1200">
+  <defs>
+    <linearGradient id="bg-11" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#14120f" />
+      <stop offset="1" stop-color="#1f1c17" />
+    </linearGradient>
+    <filter id="grain-11">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" result="noise" />
+      <feColorMatrix in="noise" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.03 0" />
+    </filter>
+  </defs>
+  <rect width="1600" height="1200" fill="url(#bg-11)" />
+  <circle cx="1174.3150634869537" cy="443.7184796834917" r="95.4455328106161" fill="none" stroke="#b7312f" stroke-width="1.5" opacity="0.5" />
+  <path d="M66.67363642094358,1032 L66.67363642094358,578.8977718124622 A133.32636357905642,133.32636357905642 0 0 1 333.3263635790564,578.8977718124622 L333.3263635790564,1032" fill="none" stroke="#b7312f" stroke-width="2" opacity="0.11" /><path d="M472.7471494547776,1032 L472.7471494547776,571.3055705760166 A127.25285054522234,127.25285054522234 0 0 1 727.2528505452224,571.3055705760166 L727.2528505452224,1032" fill="none" stroke="#faf9f5" stroke-width="2" opacity="0.16" /><path d="M896.8381643280565,1032 L896.8381643280565,479.15620987636794 A103.16183567194352,103.16183567194352 0 0 1 1103.1618356719434,479.15620987636794 L1103.1618356719434,1032" fill="none" stroke="#faf9f5" stroke-width="2" opacity="0.14" /><path d="M1286.214447015065,1032 L1286.214447015065,466.7424468243227 A113.78555298493502,113.78555298493502 0 0 1 1513.785552984935,466.7424468243227 L1513.785552984935,1032" fill="none" stroke="#b7312f" stroke-width="2" opacity="0.16" />
+  <line x1="0" y1="1060" x2="1600" y2="1060" stroke="#faf9f5" stroke-width="1" opacity="0.15" />
+  <text x="80" y="1110" font-family="Georgia, 'Shippori Mincho', serif" font-size="30" fill="#faf9f5" opacity="0.85">アル・ウラ</text>
+  <text x="80" y="1144" font-family="Helvetica, Arial, sans-serif" font-size="14" letter-spacing="4" fill="#b7312f">HOTELS</text>
+  <rect width="1600" height="1200" filter="url(#grain-11)" opacity="0.6" />
+</svg>

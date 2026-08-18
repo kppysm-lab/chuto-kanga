@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1200" width="1600" height="1200">
+  <defs>
+    <linearGradient id="bg-71" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#faf9f5" />
+      <stop offset="1" stop-color="#f2f0e8" />
+    </linearGradient>
+    <filter id="grain-71">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" result="noise" />
+      <feColorMatrix in="noise" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.03 0" />
+    </filter>
+  </defs>
+  <rect width="1600" height="1200" fill="url(#bg-71)" />
+  <circle cx="1289.8649783776443" cy="456.2900791728358" r="105.46368123752237" fill="none" stroke="#b7312f" stroke-width="1.5" opacity="0.5" />
+  <path d="M72.99242018395682,1032 L72.99242018395682,521.7681688767709 A127.00757981604318,127.00757981604318 0 0 1 327.0075798160432,521.7681688767709 L327.0075798160432,1032" fill="none" stroke="#b7312f" stroke-width="2" opacity="0.09" /><path d="M487.9416322651979,1032 L487.9416322651979,560.5836412592715 A112.05836773480213,112.05836773480213 0 0 1 712.0583677348021,560.5836412592715 L712.0583677348021,1032" fill="none" stroke="#14120f" stroke-width="2" opacity="0.13" /><path d="M890.2329111053762,1032 L890.2329111053762,561.1494235681134 A109.76708889462384,109.76708889462384 0 0 1 1109.7670888946238,561.1494235681134 L1109.7670888946238,1032" fill="none" stroke="#14120f" stroke-width="2" opacity="0.10" /><path d="M1260.379667263655,1032 L1260.379667263655,453.0933095594371 A139.62033273634518,139.62033273634518 0 0 1 1539.620332736345,453.0933095594371 L1539.620332736345,1032" fill="none" stroke="#b7312f" stroke-width="2" opacity="0.10" />
+  <line x1="0" y1="1060" x2="1600" y2="1060" stroke="#14120f" stroke-width="1" opacity="0.15" />
+  <text x="80" y="1110" font-family="Georgia, 'Shippori Mincho', serif" font-size="30" fill="#14120f" opacity="0.85">アル・ウラ</text>
+  <text x="80" y="1144" font-family="Helvetica, Arial, sans-serif" font-size="14" letter-spacing="4" fill="#b7312f">SAUDI ARABIA</text>
+  <rect width="1600" height="1200" filter="url(#grain-71)" opacity="0.6" />
+</svg>

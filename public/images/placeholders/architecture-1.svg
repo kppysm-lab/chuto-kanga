@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1200" width="1600" height="1200">
+  <defs>
+    <linearGradient id="bg-61" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#faf9f5" />
+      <stop offset="1" stop-color="#f2f0e8" />
+    </linearGradient>
+    <filter id="grain-61">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" result="noise" />
+      <feColorMatrix in="noise" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.03 0" />
+    </filter>
+  </defs>
+  <rect width="1600" height="1200" fill="url(#bg-61)" />
+  <circle cx="1249.1770477747436" cy="356.153182992783" r="88.182107218626" fill="none" stroke="#b7312f" stroke-width="1.5" opacity="0.5" />
+  <path d="M60.10839698841255,1032 L60.10839698841255,579.1206598054248 A139.89160301158745,139.89160301158745 0 0 1 339.89160301158745,579.1206598054248 L339.89160301158745,1032" fill="none" stroke="#b7312f" stroke-width="2" opacity="0.11" /><path d="M485.7825553351,1032 L485.7825553351,599.324879871367 A114.21744466489994,114.21744466489994 0 0 1 714.2174446649,599.324879871367 L714.2174446649,1032" fill="none" stroke="#14120f" stroke-width="2" opacity="0.09" /><path d="M886.3931059773979,1032 L886.3931059773979,631.4605414883516 A113.60689402260206,113.60689402260206 0 0 1 1113.606894022602,631.4605414883516 L1113.606894022602,1032" fill="none" stroke="#14120f" stroke-width="2" opacity="0.14" /><path d="M1266.1181258997499,1032 L1266.1181258997499,503.5454711334527 A133.88187410025014,133.88187410025014 0 0 1 1533.8818741002501,503.5454711334527 L1533.8818741002501,1032" fill="none" stroke="#b7312f" stroke-width="2" opacity="0.13" />
+  <line x1="0" y1="1060" x2="1600" y2="1060" stroke="#14120f" stroke-width="1" opacity="0.15" />
+  <text x="80" y="1110" font-family="Georgia, 'Shippori Mincho', serif" font-size="30" fill="#14120f" opacity="0.85">マスカット海岸線</text>
+  <text x="80" y="1144" font-family="Helvetica, Arial, sans-serif" font-size="14" letter-spacing="4" fill="#b7312f">ARCHITECTURE &amp; TRAVEL</text>
+  <rect width="1600" height="1200" filter="url(#grain-61)" opacity="0.6" />
+</svg>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1200" width="1600" height="1200">
+  <defs>
+    <linearGradient id="bg-52" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#14120f" />
+      <stop offset="1" stop-color="#1f1c17" />
+    </linearGradient>
+    <filter id="grain-52">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" result="noise" />
+      <feColorMatrix in="noise" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.03 0" />
+    </filter>
+  </defs>
+  <rect width="1600" height="1200" fill="url(#bg-52)" />
+  <circle cx="1211.3729353227527" cy="359.1289758789954" r="109.9512040801119" fill="none" stroke="#b7312f" stroke-width="1.5" opacity="0.5" />
+  <path d="M75.45256042268711,1032 L75.45256042268711,455.79811470573685 A84.54743957731289,84.54743957731289 0 0 1 244.5474395773129,455.79811470573685 L244.5474395773129,1032" fill="none" stroke="#b7312f" stroke-width="2" opacity="0.08" /><path d="M398.819618224548,1032 L398.819618224548,407.96620773895006 A81.180381775452,81.180381775452 0 0 1 561.180381775452,407.96620773895006 L561.180381775452,1032" fill="none" stroke="#faf9f5" stroke-width="2" opacity="0.09" /><path d="M711.9656219445009,1032 L711.9656219445009,464.95777075782325 A88.03437805549912,88.03437805549912 0 0 1 888.0343780554991,464.95777075782325 L888.0343780554991,1032" fill="none" stroke="#faf9f5" stroke-width="2" opacity="0.11" /><path d="M1031.316329952011,1032 L1031.316329952011,423.59047308917644 A88.68367004798897,88.68367004798897 0 0 1 1208.683670047989,423.59047308917644 L1208.683670047989,1032" fill="none" stroke="#b7312f" stroke-width="2" opacity="0.09" /><path d="M1356.2753334028066,1032 L1356.2753334028066,514.0551387826238 A83.72466659719342,83.72466659719342 0 0 1 1523.7246665971934,514.0551387826238 L1523.7246665971934,1032" fill="none" stroke="#faf9f5" stroke-width="2" opacity="0.09" />
+  <line x1="0" y1="1060" x2="1600" y2="1060" stroke="#faf9f5" stroke-width="1" opacity="0.15" />
+  <text x="80" y="1110" font-family="Georgia, 'Shippori Mincho', serif" font-size="30" fill="#faf9f5" opacity="0.85">シャルジャの書</text>
+  <text x="80" y="1144" font-family="Helvetica, Arial, sans-serif" font-size="14" letter-spacing="4" fill="#b7312f">ART &amp; CULTURE</text>
+  <rect width="1600" height="1200" filter="url(#grain-52)" opacity="0.6" />
+</svg>
