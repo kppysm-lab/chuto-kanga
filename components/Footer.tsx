@@ -7,7 +7,9 @@ export default function Footer() {
     <footer className="border-t border-line bg-paper">
       <Container className="py-16">
         <p className="font-serif text-2xl tracking-[0.1em] text-ink">中東閑雅</p>
-        <p className="mt-1 font-serif-en text-sm italic text-ink/40">Chūtō Kanga</p>
+        <p className="mt-1 text-[11px] font-medium tracking-[0.32em] text-ink/40 uppercase">
+          Chūtō Kanga
+        </p>
         <p className="mt-3 max-w-xs text-sm text-ink/50">日本の美意識で、中東を紐解く。</p>
 
         <nav className="mt-10 flex flex-wrap gap-x-8 gap-y-3 border-t border-line pt-8 text-sm text-ink/70">

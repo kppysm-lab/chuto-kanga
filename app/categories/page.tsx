@@ -8,12 +8,16 @@ import { getArticlesByCategory } from "@/lib/articles";
 export const metadata: Metadata = {
   title: "Categories",
   description: "ホテル、ダイニング、ファッション&ビューティー、イベント、アート&カルチャー、建築&トラベル——中東閑雅の6つのカテゴリー。",
+  alternates: {
+    canonical: "/categories",
+  },
 };
 
 export default function CategoriesPage() {
   return (
     <Container className="py-16 md:py-24">
       <SectionHeading
+        as="h1"
         eyebrow="Categories"
         title="6つのカテゴリー"
         description="中東の洗練を、6つの視点から紐解きます。"

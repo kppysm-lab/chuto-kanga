@@ -7,6 +7,9 @@ const category = getCategory("fashion-beauty")!;
 export const metadata: Metadata = {
   title: category.nameJa,
   description: category.description,
+  alternates: {
+    canonical: "/fashion",
+  },
 };
 
 export default function FashionPage() {

@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: "About",
   description:
     "中東閑雅について。日本の視点から中東の文化とライフスタイルを紐解く、独立系エディトリアルマガジンの成り立ちと編集方針。",
+  alternates: {
+    canonical: "/about",
+  },
 };
 
 const values = [
@@ -61,7 +64,7 @@ export default function AboutPage() {
           {values.map((v) => (
             <div key={v.title}>
               <p className="text-xs tracking-[0.2em] text-vermilion uppercase">{v.en}</p>
-              <h3 className="mt-2 font-serif text-xl">{v.title}</h3>
+              <h2 className="mt-2 font-serif text-xl">{v.title}</h2>
               <p className="mt-3 text-sm leading-relaxed text-ink/60">{v.body}</p>
             </div>
           ))}

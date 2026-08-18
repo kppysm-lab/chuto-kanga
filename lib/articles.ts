@@ -3,7 +3,7 @@ import { Article } from "./types";
 export const articles: Article[] = [
   {
     slug: "amanoi-al-ula-desert-silence",
-    title: "アル・ウラの静寂 — 砂岩の谷に建つ一軒宿",
+    title: "アル・ウラの静寂",
     titleEn: "The Silence of AlUla",
     dek: "サウジアラビア、アル・ウラの渓谷に佇む隠れ家的ホテルを訪ねて。",
     excerpt:
@@ -26,7 +26,7 @@ export const articles: Article[] = [
   },
   {
     slug: "madinat-jumeirah-arabian-courtyard",
-    title: "水路をゆく — マディナ・ジュメイラの中庭建築",
+    title: "マディナ・ジュメイラの水路",
     titleEn: "Along the Canals of Madinat Jumeirah",
     dek: "ドバイの海辺に再現された旧市街、その中庭と水路が教えてくれること。",
     excerpt:
@@ -68,7 +68,7 @@ export const articles: Article[] = [
   },
   {
     slug: "riyadh-chefs-table-new-saudi-cuisine",
-    title: "リヤドの新星 — サウジ料理を再定義する若きシェフたち",
+    title: "リヤドの新星",
     titleEn: "Riyadh's New Culinary Voice",
     dek: "石油の国というイメージの先に、いま独自の食文化が育ちつつある。",
     excerpt:
@@ -88,7 +88,7 @@ export const articles: Article[] = [
   },
   {
     slug: "abaya-reimagined-doha-designers",
-    title: "アバヤの再解釈 — ドーハの新世代デザイナーたち",
+    title: "アバヤの再解釈",
     titleEn: "The Abaya, Reimagined",
     dek: "伝統的な衣装を現代のシルエットへ。ドーハで進むファッションの静かな革新。",
     excerpt:
@@ -109,7 +109,7 @@ export const articles: Article[] = [
   },
   {
     slug: "al-ula-lights-festival",
-    title: "砂漠に浮かぶ光 — アル・ウラ・アート・フェスティバル",
+    title: "アル・ウラ・アート・フェスティバル",
     titleEn: "Light in the Desert",
     dek: "岩山と砂漠を舞台にした光のインスタレーションが、静かな熱狂を呼んでいる。",
     excerpt:
@@ -151,7 +151,7 @@ export const articles: Article[] = [
   },
   {
     slug: "sharjah-calligraphy-revival",
-    title: "書のかたち — シャルジャに見るアラビア書道の現在",
+    title: "書のかたち",
     titleEn: "The Shape of Script",
     dek: "アラビア文字の美しさを現代アートへと昇華させる書家たちの仕事。",
     excerpt:
@@ -193,7 +193,7 @@ export const articles: Article[] = [
   },
   {
     slug: "dubai-desert-modernism",
-    title: "砂漠のモダニズム — 郊外に建つ実験住宅",
+    title: "砂漠のモダニズム",
     titleEn: "Desert Modernism, Dubai",
     dek: "観光地としてのドバイの裏側で、静かに進む建築実験を追う。",
     excerpt:

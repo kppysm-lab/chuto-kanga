@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   title: "Stories",
   description:
     "中東閑雅が伝える、ホテル・ダイニング・ファッション・アート・建築のストーリー一覧。",
+  alternates: {
+    canonical: "/stories",
+  },
 };
 
 export default async function StoriesPage({
@@ -27,6 +30,7 @@ export default async function StoriesPage({
   return (
     <Container className="py-16 md:py-24">
       <SectionHeading
+        as="h1"
         eyebrow="Stories"
         title={activeCategory ? activeCategory.nameJa : "すべてのストーリー"}
         description={

@@ -38,11 +38,7 @@ export default function ArticleCard({
         interactive
       />
       <div className="mt-4">
-        <EditorialMeta
-          index={index}
-          categoryEn={category?.nameEn ?? ""}
-          location={article.location}
-        />
+        <EditorialMeta index={index} categoryEn={category?.nameEn ?? ""} date={article.date} />
         <h3
           className={`mt-2 font-serif leading-snug text-balance text-ink transition-opacity group-hover:opacity-60 ${headlineSize}`}
         >

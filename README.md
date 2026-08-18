@@ -150,7 +150,7 @@ category `slug`.
   `components/` — open the relevant page and edit the Japanese text in
   place.
 - The contact email used across the site (Contact page, mailto links,
-  "Request Media Kit" button, Newsletter) is set in **one place**:
+  "Request Media Kit" button) is set in **one place**:
   [`lib/site.ts`](lib/site.ts). Change `CONTACT_EMAIL` there and it updates
   everywhere.
 - `SITE_URL` in the same file is used for SEO metadata and the sitemap —
@@ -164,16 +164,21 @@ The header and mobile-menu links live in [`lib/nav.ts`](lib/nav.ts) as one
 list — add, remove, or relabel an entry there and both the desktop nav and
 the mobile full-screen menu update together.
 
-## 10. How the Contact form and Newsletter work
+## 10. How the Contact form works
 
-Neither uses a backend or database (intentionally, to keep this a
-zero-maintenance side project). Submitting either one opens the visitor's
-own email app with a message pre-addressed and pre-filled — they just hit
-send. This is honest and reliable but does mean the visitor needs a
-configured email app on their device. If you later want a proper web form
-that emails you directly (no reliance on the visitor's mail app), look into
-a service like Formspree or Resend — the form logic to replace lives in
-`components/ContactForm.tsx` and `components/Newsletter.tsx`.
+It doesn't use a backend or database (intentionally, to keep this a
+zero-maintenance side project). Submitting it opens the visitor's own email
+app with a message pre-addressed and pre-filled — they just hit send. This
+is honest and reliable but does mean the visitor needs a configured email
+app on their device. If you later want a proper web form that emails you
+directly (no reliance on the visitor's mail app), look into a service like
+Formspree or Resend — the form logic to replace lives in
+`components/ContactForm.tsx`.
+
+There is no newsletter signup on the site — it was removed as unnecessary
+for now. If you want one later, a service like Buttondown or Mailchimp can
+be wired up with just a plain HTML form (no backend code needed on this
+site's side).
 
 ## 11. Checking your work before publishing
 

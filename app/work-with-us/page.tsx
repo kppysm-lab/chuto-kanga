@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: "Work With Us",
   description:
     "中東閑雅とのパートナーシップについて。ブランドパートナーシップ、記事広告、コンテンツ制作、ホテル&レストランプロモーション、イベントパートナーシップ、日本×中東マーケティング。",
+  alternates: {
+    canonical: "/work-with-us",
+  },
 };
 
 const offerings = [

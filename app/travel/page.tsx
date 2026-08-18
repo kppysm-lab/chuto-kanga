@@ -7,6 +7,9 @@ const category = getCategory("architecture-travel")!;
 export const metadata: Metadata = {
   title: category.nameJa,
   description: category.description,
+  alternates: {
+    canonical: "/travel",
+  },
 };
 
 export default function TravelPage() {

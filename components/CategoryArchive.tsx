@@ -13,6 +13,7 @@ export default function CategoryArchive({ category }: { category: Category }) {
   return (
     <Container className="py-16 md:py-24">
       <SectionHeading
+        as="h1"
         eyebrow={category.nameEn}
         title={category.nameJa}
         description={category.description}

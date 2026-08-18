@@ -7,6 +7,9 @@ const category = getCategory("dining")!;
 export const metadata: Metadata = {
   title: category.nameJa,
   description: category.description,
+  alternates: {
+    canonical: "/dining",
+  },
 };
 
 export default function DiningPage() {

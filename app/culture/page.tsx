@@ -7,6 +7,9 @@ const category = getCategory("art-culture")!;
 export const metadata: Metadata = {
   title: category.nameJa,
   description: category.description,
+  alternates: {
+    canonical: "/culture",
+  },
 };
 
 export default function CulturePage() {

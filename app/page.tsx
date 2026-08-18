@@ -3,7 +3,6 @@ import Container from "@/components/Container";
 import ArticleCard from "@/components/ArticleCard";
 import EditorialLink from "@/components/EditorialLink";
 import EditorialMeta from "@/components/EditorialMeta";
-import Newsletter from "@/components/Newsletter";
 import Reveal from "@/components/motion/Reveal";
 import RevealImage from "@/components/motion/RevealImage";
 import ParallaxImage from "@/components/motion/ParallaxImage";
@@ -45,16 +44,11 @@ export default function Home() {
         </Link>
         <Container className="mt-8 md:mt-10">
           <Reveal>
-            <EditorialMeta
-              index={1}
-              categoryEn={featureCategory.nameEn}
-              location={feature.location}
-              date={feature.date}
-            />
+            <EditorialMeta index={1} categoryEn={featureCategory.nameEn} date={feature.date} />
           </Reveal>
           <Reveal delay={80}>
             <h1 className="mt-4 max-w-3xl font-serif text-4xl leading-[1.15] text-ink md:text-6xl lg:text-7xl">
-              {feature.title.split("—")[0].trim()}
+              {feature.title}
             </h1>
           </Reveal>
           {feature.titleEn ? (
@@ -116,7 +110,7 @@ export default function Home() {
           <div className="grid grid-cols-1 gap-12 md:grid-cols-12 md:items-center">
             <div className="md:col-span-7">
               <Reveal>
-                <EditorialMeta categoryEn="Culture" location={culture.location} date={culture.date} />
+                <EditorialMeta categoryEn="Culture" date={culture.date} />
               </Reveal>
               <Reveal delay={80}>
                 <blockquote className="mt-6 font-serif text-3xl leading-snug text-ink md:text-5xl">
@@ -201,7 +195,7 @@ export default function Home() {
           <div className="grid grid-cols-1 gap-12 md:grid-cols-12 md:items-end">
             <div className="md:col-span-5 md:pb-8">
               <Reveal>
-                <EditorialMeta index={6} categoryEn="Travel" location={travel.location} date={travel.date} />
+                <EditorialMeta index={6} categoryEn="Travel" date={travel.date} />
               </Reveal>
               <Reveal delay={80}>
                 <h2 className="mt-4 font-serif text-3xl leading-snug text-ink md:text-5xl">
@@ -244,7 +238,7 @@ export default function Home() {
                 <li className="flex flex-col gap-1 py-5 sm:flex-row sm:items-baseline sm:justify-between">
                   <span className="font-serif text-lg text-ink">{event.title}</span>
                   <span className="text-xs tracking-[0.1em] text-ink/40 uppercase">
-                    {event.location} — {event.date}
+                    {event.location}／{event.date}
                   </span>
                 </li>
               </Reveal>
@@ -253,12 +247,6 @@ export default function Home() {
         </Container>
       </section>
 
-      {/* Newsletter */}
-      <section className="border-t border-line py-20 md:py-28">
-        <Container>
-          <Newsletter />
-        </Container>
-      </section>
     </>
   );
 }

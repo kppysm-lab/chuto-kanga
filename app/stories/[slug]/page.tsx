@@ -7,6 +7,8 @@ import RevealImage from "@/components/motion/RevealImage";
 import Reveal from "@/components/motion/Reveal";
 import { articles, getArticle, getArticlesByCategory } from "@/lib/articles";
 import { categoryHref, getCategory } from "@/lib/categories";
+import { SITE_URL } from "@/lib/site";
+import { formatDate } from "@/lib/format";
 
 export function generateStaticParams() {
   return articles.map((a) => ({ slug: a.slug }));
@@ -24,11 +26,15 @@ export async function generateMetadata({
   return {
     title: article.title,
     description: article.excerpt,
+    alternates: {
+      canonical: `/stories/${article.slug}`,
+    },
     openGraph: {
       title: article.title,
       description: article.excerpt,
       images: [article.heroImage],
       type: "article",
+      publishedTime: article.date,
     },
   };
 }
@@ -47,8 +53,37 @@ export default async function StoryPage({
     .filter((a) => a.slug !== article.slug)
     .slice(0, 3);
 
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: article.title,
+    description: article.excerpt,
+    image: [`${SITE_URL}${article.heroImage}`],
+    datePublished: article.date,
+    author: {
+      "@type": "Organization",
+      name: article.author,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "中東閑雅 CHŪTŌ KANGA",
+      logo: {
+        "@type": "ImageObject",
+        url: `${SITE_URL}/icon.svg`,
+      },
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `${SITE_URL}/stories/${article.slug}`,
+    },
+  };
+
   return (
     <article>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
       <RevealImage
         src={article.heroImage}
         alt={article.title}
@@ -58,14 +93,14 @@ export default async function StoryPage({
       />
 
       <Container className="max-w-3xl py-14 md:py-20">
-        {category ? (
-          <Link
-            href={categoryHref(category.slug)}
-            className="text-xs tracking-[0.25em] text-vermilion uppercase"
-          >
-            {category.nameEn}
-          </Link>
-        ) : null}
+        <p className="text-xs tracking-[0.25em] uppercase">
+          {category ? (
+            <Link href={categoryHref(category.slug)} className="text-vermilion">
+              {category.nameEn}
+            </Link>
+          ) : null}
+          <span className="text-ink/40">　・　{formatDate(article.date)}</span>
+        </p>
 
         <h1 className="mt-4 font-serif text-3xl leading-snug text-balance md:text-5xl">
           {article.title}
@@ -73,21 +108,9 @@ export default async function StoryPage({
         {article.titleEn ? (
           <p className="mt-2 font-serif-en text-lg italic text-ink/50">{article.titleEn}</p>
         ) : null}
-        <p className="mt-4 text-lg leading-relaxed text-ink/60">{article.dek}</p>
-
-        <div className="mt-6 flex flex-wrap gap-x-6 gap-y-1 border-b border-line pb-8 text-xs tracking-wide text-ink/40">
-          <span>{article.location}</span>
-          <span>
-            {new Date(article.date).toLocaleDateString("ja-JP", {
-              year: "numeric",
-              month: "long",
-              day: "numeric",
-            })}
-          </span>
-          <span>読了目安 {article.readingTime}</span>
-          <span>文 — {article.author}</span>
-          {article.photographyCredit ? <span>{article.photographyCredit}</span> : null}
-        </div>
+        <p className="mt-4 border-b border-line pb-8 text-lg leading-relaxed text-ink/60">
+          {article.dek}
+        </p>
 
         <div className="prose-editorial mt-10 space-y-6">
           {article.body.map((paragraph, i) => (

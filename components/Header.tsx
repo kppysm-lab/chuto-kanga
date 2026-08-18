@@ -18,7 +18,7 @@ export default function Header() {
       <Container className="flex h-20 items-center justify-between">
         <Link href="/" className="flex flex-col leading-none" onClick={() => setMenuOpen(false)}>
           <span className="font-serif text-lg tracking-[0.15em] text-ink">中東閑雅</span>
-          <span className="mt-1 font-serif-en text-[11px] italic tracking-[0.15em] text-ink/50">
+          <span className="mt-1 font-sans text-[10px] font-medium tracking-[0.32em] text-ink/40 uppercase">
             Chūtō Kanga
           </span>
         </Link>

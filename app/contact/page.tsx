@@ -7,6 +7,9 @@ import { CONTACT_EMAIL } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contact",
   description: "中東閑雅へのお問い合わせ、取材・掲載のご相談はこちらから。",
+  alternates: {
+    canonical: "/contact",
+  },
 };
 
 export default function ContactPage() {
@@ -15,6 +18,7 @@ export default function ContactPage() {
       <div className="grid grid-cols-1 gap-16 md:grid-cols-2">
         <div>
           <SectionHeading
+            as="h1"
             eyebrow="Contact"
             title="お問い合わせ"
             description="取材のご相談、掲載・パートナーシップのご相談、その他のお問い合わせは、下記フォームまたはメールにて承っております。"

@@ -16,7 +16,7 @@
   --color-line: var(--color-line);
   --font-serif: var(--font-shippori-mincho);
   --font-sans: var(--font-noto-sans-jp);
-  --font-serif-en: var(--font-playfair-display);
+  --font-serif-en: var(--font-fraunces);
 }
 
 body {
@@ -33,10 +33,27 @@ body {
   text-wrap: balance;
 }
 
+/* Correct Japanese line-breaking: `line-break: strict` turns on kinsoku
+   shori (禁則処理) — 、。」』ゃゅょっ etc. can never start a line, 「『 can
+   never end one. Deliberately NOT using word-break:keep-all here: it
+   disables the normal per-character break points CJK text relies on, which
+   forces the overflow-wrap emergency fallback to kick in instead — and that
+   fallback breaks wherever it must, kinsoku rules or not. Left at the
+   default `word-break: normal` + no overflow-wrap, kinsoku is respected
+   everywhere and Latin words still don't break awkwardly since there's no
+   emergency break-anywhere clause forcing it. */
 :lang(ja) {
-  word-break: keep-all;
-  overflow-wrap: anywhere;
   line-break: strict;
+}
+
+/* Article body copy: same kinsoku-safe wrapping, plus modern paragraph
+   layout. text-wrap: pretty is Chromium-only today and degrades safely
+   everywhere else; hanging-punctuation is Safari-only and equally safe to
+   leave on. */
+.prose-editorial p {
+  line-break: strict;
+  text-wrap: pretty;
+  hanging-punctuation: first allow-end;
 }
 
 @keyframes seal-in {
