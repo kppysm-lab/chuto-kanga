@@ -19,8 +19,8 @@ export default function Footer() {
           <Link href="/about" className="hover:text-vermilion">
             About
           </Link>
-          <Link href="/work-with-us" className="hover:text-vermilion">
-            Work With Us
+          <Link href="/partnerships" className="hover:text-vermilion">
+            Partnerships
           </Link>
           <a href={SOCIAL_INSTAGRAM} target="_blank" rel="noreferrer" className="hover:text-vermilion">
             Instagram
@@ -32,7 +32,7 @@ export default function Footer() {
 
         <div className="mt-10 flex flex-col gap-2 border-t border-line pt-6 text-xs text-ink/40 sm:flex-row sm:items-center sm:justify-between">
           <p>&copy; {new Date().getFullYear()} Chūtō Kanga / 中東閑雅.</p>
-          <p>Tokyo / Dubai</p>
+          <p>Independent Media, Tokyo</p>
         </div>
       </Container>
     </footer>

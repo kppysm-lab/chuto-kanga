@@ -39,8 +39,8 @@ export default function ContactPage() {
               <p className="text-xs tracking-[0.2em] text-ink/40 uppercase">
                 Brand Partnerships
               </p>
-              <a href="/work-with-us" className="mt-1 block text-ink hover:text-vermilion">
-                Work With Us ページを見る →
+              <a href="/partnerships" className="mt-1 block text-ink hover:text-vermilion">
+                Partnerships ページを見る →
               </a>
             </div>
           </div>

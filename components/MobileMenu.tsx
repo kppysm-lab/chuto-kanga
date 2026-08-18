@@ -52,8 +52,8 @@ export default function MobileMenu({
       </nav>
 
       <div className="flex shrink-0 flex-col gap-3 px-6 pb-10 text-sm text-ink/50">
-        <Link href="/work-with-us" onClick={onClose} className="hover:text-vermilion">
-          Work With Us
+        <Link href="/partnerships" onClick={onClose} className="hover:text-vermilion">
+          Partnerships
         </Link>
         <Link href="/contact" onClick={onClose} className="hover:text-vermilion">
           Contact

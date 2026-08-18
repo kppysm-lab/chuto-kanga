@@ -6,6 +6,14 @@
   --color-paper-deep: #f2f0e8;
   --color-vermilion: #b7312f;
   --color-line: #e2ded2;
+  /* Muted, photography-adjacent placeholder tones — stand in for real
+     imagery until it's sourced. Not UI accent colors; used only as
+     background fills on image-shaped blocks. */
+  --color-sand: #e8dfc8;
+  --color-clay: #c7a283;
+  --color-dune: #d8b3ac;
+  --color-mist: #b4c7cb;
+  --color-moss: #b6bb8c;
 }
 
 @theme inline {
@@ -14,6 +22,11 @@
   --color-paper-deep: var(--color-paper-deep);
   --color-vermilion: var(--color-vermilion);
   --color-line: var(--color-line);
+  --color-sand: var(--color-sand);
+  --color-clay: var(--color-clay);
+  --color-dune: var(--color-dune);
+  --color-mist: var(--color-mist);
+  --color-moss: var(--color-moss);
   --font-serif: var(--font-shippori-mincho);
   --font-sans: var(--font-noto-sans-jp);
   --font-serif-en: var(--font-fraunces);

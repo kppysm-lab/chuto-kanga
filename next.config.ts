@@ -15,6 +15,7 @@ const nextConfig: NextConfig = {
       { source: "/categories/architecture-travel", destination: "/travel", permanent: true },
       { source: "/categories/dining", destination: "/dining", permanent: true },
       { source: "/categories/art-culture", destination: "/culture", permanent: true },
+      { source: "/work-with-us", destination: "/partnerships", permanent: true },
     ];
   },
 };
