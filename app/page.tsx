@@ -247,6 +247,23 @@ export default function Home() {
         </Container>
       </section>
 
+      {/* For Brands & Partners — quiet, secondary CTA */}
+      <section className="border-t border-line py-16 md:py-20">
+        <Container className="max-w-2xl">
+          <Reveal>
+            <p className="text-xs tracking-[0.2em] text-ink/40 uppercase">
+              For Brands &amp; Partners
+            </p>
+            <p className="mt-4 text-sm leading-relaxed text-ink/60">
+              中東閑雅では、ホテル、レストラン、ブランド、イベント、文化施設などを対象に、編集・コンテンツ制作・日本向けプロモーションを行っています。
+            </p>
+            <div className="mt-6">
+              <EditorialLink href="/partnerships">View Partnerships</EditorialLink>
+            </div>
+          </Reveal>
+        </Container>
+      </section>
+
     </>
   );
 }

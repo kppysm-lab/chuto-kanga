@@ -81,7 +81,7 @@ export default function AboutPage() {
 
         <div className="mt-14 border-t border-line pt-8">
           <p className="text-[17px] leading-[1.9] text-ink/80">
-            中東閑雅は、ブランド、ホテル、レストラン、文化機関、デスティネーション、イベントとともに、限定的な編集・クリエイティブパートナーシップにも取り組んでいます。
+            中東閑雅では編集活動に加え、ホテル、レストラン、ブランド、イベント、文化施設などを対象に、記事・写真・映像・SNSコンテンツの制作、日本市場向けのプロモーションを行っています。
           </p>
           <div className="mt-8 flex flex-wrap gap-10">
             <EditorialLink href="/partnerships">Explore Partnerships</EditorialLink>

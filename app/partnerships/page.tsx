@@ -7,11 +7,44 @@ import { CONTACT_EMAIL } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Partnerships",
   description:
-    "中東閑雅とのパートナーシップについて。編集パートナーシップ、クリエイティブ制作、日本×中東のクロスカルチャープロジェクトのご相談。",
+    "中東閑雅とのパートナーシップについて。Sponsored Editorial、コンテンツ制作、SNS・ホスピタリティ・イベントプロモーションなどのご相談。",
   alternates: {
     canonical: "/partnerships",
   },
 };
+
+const services = [
+  {
+    en: "Sponsored Editorial",
+    title: "タイアップ記事",
+    body: "タイアップ記事、インタビュー、ホテル・レストラン・ブランドの紹介など、編集の視点によるコンテンツです。",
+  },
+  {
+    en: "Content Production",
+    title: "コンテンツ制作",
+    body: "記事、写真、映像、SNS用素材など、Editorialと同じ基準で制作します。",
+  },
+  {
+    en: "Social Media Promotion",
+    title: "SNSプロモーション",
+    body: "中東閑雅のSNSを通じて、ブランド・施設・イベントを発信します。",
+  },
+  {
+    en: "Hospitality Promotion",
+    title: "ホスピタリティプロモーション",
+    body: "ホテル、リゾート、レストラン、スパ、デスティネーションの日本向けプロモーションです。",
+  },
+  {
+    en: "Event Promotion",
+    title: "イベントプロモーション",
+    body: "開催前の告知から、当日の取材・撮影、SNS発信、レポート記事までを担います。",
+  },
+  {
+    en: "Japan-facing Promotion",
+    title: "日本市場向けプロモーション",
+    body: "日本語コンテンツの制作を通じて、日本の読者・旅行者・顧客とのコミュニケーションを支援します。",
+  },
+];
 
 const moodTone = {
   sand: "bg-sand",
@@ -65,78 +98,29 @@ export default function PartnershipsPage() {
 
       <Container className="mt-24 max-w-5xl md:mt-32">
         <Reveal>
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-12 md:items-end">
-            <div className="md:col-span-7">
-              <Mood
-                tone="mist"
-                className="-ml-6 aspect-[3/2] w-[calc(100%+1.5rem)] md:-ml-10 md:w-[calc(100%+2.5rem)]"
-              />
-            </div>
-            <div className="md:col-span-5">
-              <p className="text-xs tracking-[0.15em] text-ink/50 uppercase">
-                Editorial Partnerships
-              </p>
-              <h2 className="mt-3 font-serif text-2xl text-ink">編集パートナーシップ</h2>
-              <p className="mt-4 text-xs text-ink/40">
-                記事広告　／　ブランドフィーチャー　／　インタビュー　／　デスティネーション特集
-              </p>
-              <p className="mt-4 text-sm leading-relaxed text-ink/70">
-                ブランドや場所の背後にある文化とデザインを掘り下げる、編集としての基準を保った制作です。
-              </p>
-            </div>
-          </div>
+          <p className="max-w-lg text-sm leading-relaxed text-ink/70">
+            編集としての視点をそのままに、ブランド・ホテル・レストラン・イベントのための制作とプロモーションを行っています。
+          </p>
         </Reveal>
+        <ul className="mt-10 divide-y divide-line border-t border-line">
+          {services.map((s, i) => (
+            <Reveal key={s.en} delay={i * 40}>
+              <li className="grid grid-cols-1 gap-2 py-8 md:grid-cols-12 md:gap-8">
+                <div className="md:col-span-4">
+                  <p className="text-xs tracking-[0.15em] text-ink/50 uppercase">{s.en}</p>
+                  <h2 className="mt-2 font-serif text-xl text-ink">{s.title}</h2>
+                </div>
+                <p className="text-sm leading-relaxed text-ink/70 md:col-span-8">{s.body}</p>
+              </li>
+            </Reveal>
+          ))}
+        </ul>
       </Container>
 
-      <Container className="mt-24 max-w-5xl md:mt-32">
-        <Reveal>
-          <div className="flex gap-3">
-            <Mood tone="moss" className="aspect-[16/9] w-[42%]" />
-            <Mood tone="sand" className="aspect-[2/3] w-[18%]" />
-            <Mood tone="dune" className="aspect-square w-[34%]" />
-          </div>
-          <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-12">
-            <p className="text-xs tracking-[0.15em] text-ink/50 uppercase md:col-span-3">
-              Creative
-            </p>
-            <p className="text-sm leading-relaxed text-ink/70 md:col-span-9">
-              写真、映像、ソーシャルコンテンツを、日本の読者を意識してプロジェクト単位で制作します。
-            </p>
-          </div>
-        </Reveal>
-      </Container>
-
-      <Container className="mt-24 max-w-5xl md:mt-32">
-        <Reveal>
-          <div className="relative">
-            <div className="grid grid-cols-1 gap-8 md:grid-cols-12">
-              <div className="md:col-span-4">
-                <Mood tone="clay" className="aspect-[4/5] w-full" />
-              </div>
-              <div className="md:col-span-8">
-                <p className="text-xs tracking-[0.15em] text-ink/50 uppercase">
-                  Experiences &amp; Cross-Cultural Projects
-                </p>
-                <h2 className="mt-3 font-serif text-2xl text-ink">
-                  体験とクロスカルチャープロジェクト
-                </h2>
-                <p className="mt-4 text-xs text-ink/40">
-                  イベント　／　ホテル&amp;ダイニング体験　／　メディアパートナーシップ
-                </p>
-                <p className="mt-4 max-w-md text-sm leading-relaxed text-ink/70">
-                  日本と中東をつなぐプロジェクトへと、時間をかけて育てていきたい領域です。
-                </p>
-              </div>
-            </div>
-            <Mood tone="mist" className="absolute -bottom-6 right-[6%] hidden h-24 w-[14%] md:block" />
-          </div>
-        </Reveal>
-      </Container>
-
-      <Container className="mb-24 mt-28 max-w-5xl border-t border-line pt-10 md:mb-32 md:mt-36">
+      <Container className="mb-24 mt-16 max-w-5xl border-t border-line pt-10 md:mb-32 md:mt-20">
         <p className="text-xs tracking-[0.15em] text-ink/50 uppercase">Project Enquiries</p>
         <p className="mt-3 max-w-md text-sm leading-relaxed text-ink/70">
-          編集パートナーシップ、ホスピタリティ、イベント、カルチャープロジェクトについてのご相談を承っています。
+          Sponsored Editorial、コンテンツ制作、SNS・ホスピタリティ・イベントプロモーションについてのご相談を承っています。
         </p>
         <div className="mt-6 flex flex-wrap gap-10">
           <EditorialLink href="/contact">Contact</EditorialLink>
