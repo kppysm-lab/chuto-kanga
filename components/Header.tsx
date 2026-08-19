@@ -7,11 +7,13 @@ import Container from "./Container";
 import MobileMenu from "./MobileMenu";
 import SearchOverlay from "./SearchOverlay";
 import { primaryNav } from "@/lib/nav";
+import { getLangSwitch } from "@/lib/lang";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const pathname = usePathname();
+  const langSwitch = getLangSwitch(pathname);
 
   return (
     <header className="sticky top-0 z-50 border-b border-line bg-paper">
@@ -45,6 +47,12 @@ export default function Header() {
           >
             Search
           </button>
+          <Link
+            href={langSwitch.href}
+            className="text-xs tracking-[0.15em] text-ink/50 uppercase transition-colors hover:text-vermilion"
+          >
+            {langSwitch.label}
+          </Link>
         </nav>
 
         <button

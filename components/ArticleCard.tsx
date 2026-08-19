@@ -18,6 +18,7 @@ export default function ArticleCard({
   index,
   showExcerpt = true,
   sizes = "(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw",
+  lang = "ja",
 }: {
   article: Article;
   aspect?: keyof typeof aspectClass;
@@ -25,14 +26,18 @@ export default function ArticleCard({
   index?: number;
   showExcerpt?: boolean;
   sizes?: string;
+  lang?: "ja" | "en";
 }) {
   const category = getCategory(article.category);
+  const title = lang === "en" ? article.titleEn || article.title : article.title;
+  const excerpt = lang === "en" ? article.excerptEn || article.excerpt : article.excerpt;
+  const href = lang === "en" ? `/en/stories/${article.slug}` : `/stories/${article.slug}`;
 
   return (
-    <Link href={`/stories/${article.slug}`} className="group block">
+    <Link href={href} className="group block">
       <RevealImage
         src={article.heroImage}
-        alt={article.title}
+        alt={title}
         className={`bg-paper-deep ${aspectClass[aspect]}`}
         sizes={sizes}
         interactive
@@ -42,12 +47,10 @@ export default function ArticleCard({
         <h3
           className={`mt-2 font-serif leading-snug text-balance text-ink transition-opacity group-hover:opacity-60 ${headlineSize}`}
         >
-          {article.title}
+          {title}
         </h3>
         {showExcerpt ? (
-          <p className="mt-2 text-sm leading-relaxed text-ink/60 line-clamp-2">
-            {article.excerpt}
-          </p>
+          <p className="mt-2 text-sm leading-relaxed text-ink/60 line-clamp-2">{excerpt}</p>
         ) : null}
       </div>
     </Link>

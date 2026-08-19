@@ -3,13 +3,61 @@ slug: bahrain-pearl-underwater-archaeology
 title: 真珠が消えた海の底に、バーレーンが掘り起こすもの
 titleEn: What Bahrain Is Bringing Back From the Sea Where Its Pearls Once Were
 dek: 石油より前、この国を支えていたのは真珠だった。その記憶は、いまも海の底に眠っている。
+dekEn: |-
+  Before oil, this nation was built on pearls. That memory still sleeps at the bottom of the sea.
 excerpt: かつて真珠採取で栄えたバーレーンの海に、日本の考古学チームが加わり、沈んだ船と記憶を掘り起こそうとしている。天然真珠ブランドMATTARや認証機関DANATなど、いまも息づく真珠文化とあわせて紹介。
+excerptEn: |-
+  A Japanese archaeological team has joined Bahrain's pearling coast to help uncover sunken ships and memory. Alongside the still-living pearl culture — the natural pearl house MATTAR and the certification body DANAT.
 category: art-culture
 location: バーレーン
 date: 2026-08-19
 author: 中東閑雅編集部
 heroImage: /images/articles/gettyimages-2218264900-594x594.jpg
 featured: true
+bodyEn: |-
+  **Before Oil, This Nation Was Built on Pearls**
+
+  ![](/images/articles/pearl_diving_gallery_4.webp)
+
+  Holding their breath, divers would drop into the sea, gather oysters, and sort through them for pearls. Generation after generation carried on this work, always alongside danger. Dhows loaded with pearls moved along the coast, merchants' mansions lined the shore, and the lives of the divers themselves shaped the rhythm of everyday life here.
+
+  Before a pearl was ever jewelry, it was somebody's labor, undertaken at the risk of their life — it was a family's entire livelihood.
+
+  **That Memory Is Already Protected on Land**
+
+  Bahrain has, in fact, already given form to this pearling history once before. In 2012, "Pearling, Testimony of an Island Economy" was inscribed as a UNESCO World Heritage Site: oyster beds remaining in the north, the Bu Maher Fort at the southern tip of Muharraq Island, and seventeen buildings once home to pearl merchants and divers. Connected by a 3.5-kilometer walking trail, the area remains maintained today as a place to walk through and experience. In other words, the memory of pearling has already been carefully preserved — on land.
+
+  **But the Seabed Remained Untouched**
+
+  The ships that carried the pearls, and the tools used for diving, are another matter entirely. As the era shifted to oil and pearling declined, some of them fell out of use and simply sank into the sea. While the buildings on land were protected as World Heritage, the memories that sank beneath the waves went unexcavated for a long time, sleeping undisturbed.
+
+  Bahrain's Authority for Culture and Antiquities (BACA) has partnered with the Institute of Cultural Properties at Teikyo University in Japan, to search for, record, and study the ships and sites sunk in Bahrain's waters together. What began as preserving the memory of pearls on land is finally reaching out toward the sea.
+
+  **It's Not Just About Finding Shipwrecks**
+
+  BACA chairman Sheikh Khalifa bin Ahmed bin Abdullah Al Khalifa describes the survey as something that "opens a new horizon for archaeological research and documentation." The goal is not simply to raise artifacts.
+
+  It's to excavate the deep connection between the people of Bahrain and the sea itself, laying the groundwork for exploring maritime culture — and, they say, to sharpen Bahrain's own research methods in the process.
+
+  This survey isn't meant to be a one-off. Going forward, regular survey programs will continue, sites that are found will be protected for future generations, and data will be shared. Joint training programs to develop local talent are also reportedly planned. Exactly how any discovered artifacts will be displayed or used hasn't been detailed yet. For now, it seems, "find it, and protect it" is meant to be the first step.
+
+  **Even So, the Culture of the Pearl Never Broke**
+
+  https://www.instagram.com/p/DZAd4pLDI72/
+
+  Even as memory sank to the seabed, the culture of the natural pearl is still alive in Bahrain today. MATTAR, a family brand running since 1850, still deals exclusively in natural pearls, working alongside local divers to keep gathering them.
+
+  https://www.instagram.com/p/DRO2s3DCElR/?hl=en
+
+  https://www.instagram.com/p/DRFioQtCtez/?hl=en
+
+  DANAT, a public authority, certifies that every single one of those pearls is genuine.
+
+  The memory on land is preserved as World Heritage, the culture of today is carried forward as a brand, and now, the memory sunk beneath the sea is being reached for once more, as another asset worth treasuring. The memory bound up in pearls may be, little by little, reconnecting itself — across land and sea, past and present.
+
+  Before a pearl was a jewel, it was the memory of someone who dove into the sea. Whose memory is it now, and who is reaching for it?
+
+  (Sources: Daily Tribune, "Hunt for Underwater Heritage," August 3, 2026 / Gulf Daily News, "Bahrain set to explore its marine heritage," August 4, 2026 / Al Bilad Press, 2026. Bahrain's pearling trail was inscribed as a UNESCO World Heritage Site on June 30, 2012, per the UNESCO World Heritage Centre. Information on MATTAR and DANAT is drawn from their respective official websites, mattarjewelers.com and danat.bh.)
 ---
 **石油より前、この国を支えていたのは真珠だった**
 

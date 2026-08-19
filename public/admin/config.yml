@@ -38,9 +38,19 @@ collections:
         name: "dek"
         widget: "string"
 
+      - label: "リード文（英語・任意）"
+        name: "dekEn"
+        widget: "string"
+        required: false
+
       - label: "要約（一覧カードに表示されます）"
         name: "excerpt"
         widget: "text"
+
+      - label: "要約（英語・任意）"
+        name: "excerptEn"
+        widget: "text"
+        required: false
 
       - label: "カテゴリー"
         name: "category"
@@ -91,3 +101,11 @@ collections:
         buttons: ["bold", "italic", "link"]
         editor_components: ["image"]
         hint: "Instagramの投稿を埋め込みたい場合は、投稿のURL（https://www.instagram.com/p/... または /reel/...）だけを1つの段落として貼り付けてください（前後に文章がない、独立した行にすること）。"
+
+      - label: "本文（英語・任意）"
+        name: "bodyEn"
+        widget: "markdown"
+        required: false
+        buttons: ["bold", "italic", "link"]
+        editor_components: ["image"]
+        hint: "英語版のサイト（/en）に表示されます。空のままでも日本語版だけは公開されます。"

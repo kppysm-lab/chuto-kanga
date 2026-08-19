@@ -1,7 +1,9 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { primaryNav } from "@/lib/nav";
+import { getLangSwitch } from "@/lib/lang";
 
 export default function MobileMenu({
   open,
@@ -12,6 +14,9 @@ export default function MobileMenu({
   onClose: () => void;
   onSearch: () => void;
 }) {
+  const pathname = usePathname();
+  const langSwitch = getLangSwitch(pathname);
+
   if (!open) return null;
 
   return (
@@ -57,6 +62,9 @@ export default function MobileMenu({
         </Link>
         <Link href="/contact" onClick={onClose} className="hover:text-vermilion">
           Contact
+        </Link>
+        <Link href={langSwitch.href} onClick={onClose} className="hover:text-vermilion">
+          {langSwitch.label}
         </Link>
       </div>
     </div>

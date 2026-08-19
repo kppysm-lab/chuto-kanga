@@ -3,7 +3,11 @@ slug: amanoi-al-ula-desert-silence
 title: アル・ウラの静寂
 titleEn: The Silence of AlUla
 dek: サウジアラビア、アル・ウラの渓谷に佇む隠れ家的ホテルを訪ねて。
+dekEn: |-
+  A visit to a hideaway hotel set in the valleys of AlUla, Saudi Arabia.
 excerpt: 何億年もの風が削った砂岩の谷に、光と影だけで構成された建築が立つ。サウジアラビア北西部、アル・ウラで見た「何もないことの贅沢」について。
+excerptEn: |-
+  In a sandstone canyon carved by hundreds of millions of years of wind, an architecture built from nothing but light and shadow stands. On the luxury of having nothing, found in northwestern Saudi Arabia.
 category: hotels
 location: アル・ウラ、サウジアラビア
 date: '2026-06-12'
@@ -12,6 +16,16 @@ photographyCredit: Photography — Chūtō Kanga
 readingTime: 6分
 heroImage: /images/placeholders/hotels-1.svg
 featured: true
+bodyEn: |-
+  AlUla, in northwestern Saudi Arabia — under a two-hour flight from the capital Riyadh — is known as the land where the Nabataeans carved tombs into rock two thousand years ago. As the sun sets, the whole valley shifts from amber to indigo, and its sandstone walls rise like an enormous folding screen.
+
+  The property where I stayed was deliberately designed to be "invisible." Rooms are scattered along the rock face, their outlines barely legible from the front. "Being humble toward the landscape was the one luxury this project allowed itself," the architect told me.
+
+  Stepping into a room, you notice how little decoration there is. Wood, hemp, unglazed earthenware. The color palette is simply that of the land, and the room's real subject is the canyon beyond the window. It echoes Japan's own aesthetics of subtraction — a richness that comes not from adding, but from taking away.
+
+  Dinner was served outdoors, lit only by torches. Local lamb, dates grilled over charcoal, and Arabic bread stretched impossibly thin. Few dishes, but each one dense with intention. Not excess hospitality, but exactly what's needed, offered with the right gestures — and in that, a quiet tension.
+
+  On the way out, the manager laughed and said, "the real luxury here is that your phone doesn't get signal." We tend to picture Middle Eastern luxury hotels as places of excess. But what's at the frontier now might be something else entirely: the discipline of designing for nothing.
 ---
 サウジアラビア北西部、アル・ウラ。首都リヤドから飛行機で二時間弱のこの土地は、二千年前にナバテア人が岩を穿って墓を刻んだ土地として知られる。日が沈むと、谷全体が橙から藍へと色を変え、砂岩の壁が巨大な屏風のように立ち上がる。
 

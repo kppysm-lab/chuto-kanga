@@ -22,12 +22,22 @@ const articles = files.map((file) => {
     .map((p) => p.trim())
     .filter(Boolean);
 
+  const bodyEn = data.bodyEn
+    ? data.bodyEn
+        .trim()
+        .split(/\n\s*\n/)
+        .map((p) => p.trim())
+        .filter(Boolean)
+    : undefined;
+
   return {
     slug: data.slug,
     title: data.title,
     titleEn: data.titleEn || undefined,
     dek: data.dek,
+    dekEn: data.dekEn || undefined,
     excerpt: data.excerpt,
+    excerptEn: data.excerptEn || undefined,
     category: data.category,
     location: data.location,
     date: toDateString(data.date),
@@ -36,6 +46,7 @@ const articles = files.map((file) => {
     heroImage: data.heroImage,
     featured: data.featured || undefined,
     body,
+    bodyEn,
   };
 });
 

@@ -3,9 +3,13 @@ slug: arabic-calligraphy-ai-craft
 title: 筆が知っていること ― AI時代のアラビア書道と、手わざの居場所
 titleEn: "What the Hand Knows: Arabic Calligraphy in the Age of AI"
 dek: AIが文字を「書く」時代に、なぜ人はいまも筆を執り続けるのか。
+dekEn: |-
+  In an age when AI can "write" text, why do people still pick up the brush?
 excerpt: |-
   サウジアラビアが国家的に推進する「アラビア書道イヤー」を背景に、書家イブラヒム・ザキ氏はAIについて「研究のための道具にすぎない」と語る。
   アラビア書道とAI、手わざの価値を問う一本。
+excerptEn: |-
+  Against the backdrop of Saudi Arabia's national push for a "Year of Arabic Calligraphy," calligrapher Ibrahim Zaki says AI is "no more than a research tool." A look at Arabic calligraphy, AI, and the value of what the hand still knows.
 category: art-culture
 location: サウジアラビア
 date: 2026-08-19
@@ -13,6 +17,32 @@ author: 中東閑雅編集部
 readingTime: "5"
 heroImage: /images/articles/camera02comp.png.webp
 featured: true
+bodyEn: |-
+  Why Saudi Arabia Is Serious About Its Year of Arabic Calligraphy
+
+  Saudi Arabia is investing seriously in Arabic calligraphy right now. A national "Year of Arabic Calligraphy." A newly opened Mohammed bin Salman Global Academy for Arabic Calligraphy in Madinah. This isn't only about preservation and archiving — it extends to education and international exchange. Madinah is considered the birthplace of Arabic calligraphy itself, long tied to the copying of the Quran and the transmission of Islamic knowledge.
+
+  Calligrapher Ibrahim Zaki on Keeping AI at a Distance
+
+  Calligrapher and designer Ibrahim Zaki spoke to Arab News about this moment. While praising Saudi Arabia's commitment, he drew a clear line on the one question everyone wants answered: what does AI mean for calligraphy? AI, he said, is "merely a beginning, a research tool." The relationship formed between hand, tool, and paper, he argued, is something AI cannot replace.
+
+  It's a striking way to put it. He isn't hostile to AI, nor is he celebrating it. He positions it as "a tool for research," while drawing a firm line between that and the act of writing itself. Generating a character and writing one, he seems to be saying, may look similar — but they are not the same thing.
+
+  What Is Calligraphy? An Aesthetics of the Hand's Memory
+
+  What is calligraphy, really? It's a symbol that carries information, but it's also a trace left by the memory of the hand. The speed at which the brush touches paper, the pressure applied, the timing of a breath. The pause — ma — before the next stroke begins. All of it lives in a world that is the opposite of efficiency. If all you need is legibility, AI might well be enough. But if the goal is calligraphy that moves whoever sees it, something only describable as the memory of the hand becomes necessary.
+
+  A Quiet Resonance With Japanese Calligraphy
+
+  For anyone familiar with Japanese calligraphy, this won't feel like a distant idea. Ink, brush, paper, and breath coming together as one — that way of facing the written character quietly overlaps with Arabic calligraphy too. The tension between AI-generated text and writing by hand is, right now, being debated in Japan's own calligraphy and craft circles as well.
+
+  Can Handcraft Become a National Cultural Asset?
+
+  Saudi Arabia's investment in calligraphy may not simply be about protecting cultural heritage. Beneath the banner of Vision 2030's "modernization," it can also be read as an attempt to reposition the skill of the hand itself as a national cultural asset. Where does value go once oil no longer defines it? What Gulf countries are looking toward may not be only future technology, but also the memory of the hand that was nearly lost.
+
+  AI can "write" a character. But can it ever learn the ma, the breath, that calligraphy carries? The value of handcraft may, in fact, sit at the exact opposite end of efficiency. It's a question no one has answered yet.
+
+  (Sources: Daily Tribune, "Calligrapher: 'AI cannot replace human touch' in Arabic script," August 16, 2026. Information on the Madinah center is based on Arab News, "Crown prince sponsors launch of world-class Arabic calligraphy center in Madinah." Quotes in this article are drawn from the same report.)
 ---
 サウジアラビアが「アラビア書道イヤー」に本気を注ぐ理由
 

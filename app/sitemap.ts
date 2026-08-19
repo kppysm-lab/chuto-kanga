@@ -26,5 +26,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: a.date,
   }));
 
-  return [...staticRoutes, ...categoryRoutes, ...articleRoutes];
+  const enRoutes = [
+    { url: `${SITE_URL}/en`, lastModified: new Date() },
+    { url: `${SITE_URL}/en/stories`, lastModified: new Date() },
+    ...articles.map((a) => ({
+      url: `${SITE_URL}/en/stories/${a.slug}`,
+      lastModified: a.date,
+    })),
+  ];
+
+  return [...staticRoutes, ...categoryRoutes, ...articleRoutes, ...enRoutes];
 }

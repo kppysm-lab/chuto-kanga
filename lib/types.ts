@@ -18,7 +18,9 @@ export interface Article {
   title: string;
   titleEn?: string;
   dek: string;
+  dekEn?: string;
   excerpt: string;
+  excerptEn?: string;
   category: CategorySlug;
   location: string;
   date: string;
@@ -27,4 +29,5 @@ export interface Article {
   heroImage: string;
   featured?: boolean;
   body: string[];
+  bodyEn?: string[];
 }
