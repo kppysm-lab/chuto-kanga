@@ -61,6 +61,8 @@ https://www.instagram.com/p/DZAd4pLDI72/
 
 海の底に沈んだ記憶がある一方で、天然真珠の文化はいまもバーレーンで生きている。1850年から続く家族ブランド「MATTAR」は、いまも天然真珠だけを扱い、地元の潜水士とともに真珠を採り続けている。
 
+https://www.instagram.com/p/DRO2s3DCElR/?hl=en
+
 https://www.instagram.com/p/DRFioQtCtez/?hl=en
 
 「DANAT」という公的機関が、その一粒一粒が本物であることを証明する。
