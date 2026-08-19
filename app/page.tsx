@@ -7,16 +7,17 @@ import Reveal from "@/components/motion/Reveal";
 import RevealImage from "@/components/motion/RevealImage";
 import ParallaxImage from "@/components/motion/ParallaxImage";
 import TiltWrapper from "@/components/motion/TiltWrapper";
-import { getArticle } from "@/lib/articles";
+import { getArticle, getLatestArticles } from "@/lib/articles";
 import { getCategory } from "@/lib/categories";
 import { events } from "@/lib/events";
 
 export default function Home() {
-  const feature = getArticle("amanoi-al-ula-desert-silence")!;
+  // The hero and "Latest" duo always show the three most recently
+  // published stories, so a new article appears here automatically —
+  // no code edit needed. The Culture/Dining/Travel sections below stay
+  // hand-picked, the way a magazine editor lays out a front page.
+  const [feature, latestA, latestB] = getLatestArticles(3);
   const featureCategory = getCategory(feature.category)!;
-
-  const latestA = getArticle("jeddah-biennale-emerging-voices")!;
-  const latestB = getArticle("abaya-reimagined-doha-designers")!;
 
   const culture = getArticle("sharjah-calligraphy-revival")!;
 
