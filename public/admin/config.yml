@@ -1,0 +1,97 @@
+backend:
+  name: github
+  repo: kppysm-lab/chuto-kanga
+  branch: main
+  base_url: https://chuto-kanga.vercel.app
+  auth_endpoint: api/auth
+
+media_folder: "public/images/articles"
+public_folder: "/images/articles"
+
+collections:
+  - name: "articles"
+    label: "記事"
+    label_singular: "記事"
+    folder: "content/articles"
+    create: true
+    slug: "{{fields.slug}}"
+    identifier_field: title
+    summary: "{{title}} — {{date}}"
+    sortable_fields: ["date", "title", "category"]
+    fields:
+      - label: "URLスラッグ（半角英数とハイフンのみ／後から変更しないこと）"
+        name: "slug"
+        widget: "string"
+        pattern: ["^[a-z0-9-]+$", "半角英小文字・数字・ハイフンのみ使用できます（例: doha-new-museum）"]
+        hint: "記事のURLになります。例: chutokanga.com/stories/doha-new-museum"
+
+      - label: "タイトル（日本語）"
+        name: "title"
+        widget: "string"
+
+      - label: "タイトル（英語・任意）"
+        name: "titleEn"
+        widget: "string"
+        required: false
+
+      - label: "リード文（見出し下の1行）"
+        name: "dek"
+        widget: "string"
+
+      - label: "要約（一覧カードに表示されます）"
+        name: "excerpt"
+        widget: "text"
+
+      - label: "カテゴリー"
+        name: "category"
+        widget: "select"
+        options:
+          - { label: "Hotels", value: "hotels" }
+          - { label: "Dining", value: "dining" }
+          - { label: "Fashion & Beauty", value: "fashion-beauty" }
+          - { label: "Events", value: "events" }
+          - { label: "Art & Culture", value: "art-culture" }
+          - { label: "Architecture & Travel", value: "architecture-travel" }
+
+      - label: "場所"
+        name: "location"
+        widget: "string"
+        hint: "例: ドバイ、アラブ首長国連邦"
+
+      - label: "公開日"
+        name: "date"
+        widget: "datetime"
+        date_format: "YYYY-MM-DD"
+        time_format: false
+        format: "YYYY-MM-DD"
+
+      - label: "執筆者"
+        name: "author"
+        widget: "string"
+        default: "中東閑雅編集部"
+
+      - label: "写真クレジット（任意）"
+        name: "photographyCredit"
+        widget: "string"
+        required: false
+
+      - label: "読了目安（例: 6分）"
+        name: "readingTime"
+        widget: "string"
+        default: "5分"
+
+      - label: "メイン画像"
+        name: "heroImage"
+        widget: "image"
+
+      - label: "トップページ掲載候補にする"
+        name: "featured"
+        widget: "boolean"
+        required: false
+        default: false
+
+      - label: "本文（段落ごとに空行で区切ってください）"
+        name: "body"
+        widget: "markdown"
+        buttons: ["bold", "italic", "link"]
+        editor_components: []

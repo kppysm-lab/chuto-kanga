@@ -4,10 +4,11 @@
 Eastern hotels, dining, fashion & beauty, events, art & culture, and
 architecture & travel, for a Japanese readership.
 
-Built with Next.js + TypeScript + Tailwind CSS. **There is no database and no
-CMS to log into.** Every story is a plain object in one file
-(`lib/articles.ts`) — you add a story by editing that file, the same way
-you'd edit a Word document, then publishing means running one command.
+Built with Next.js + TypeScript + Tailwind CSS. **There is no database.**
+Every story is a Markdown file in `content/articles/`. You can edit those
+files by hand, or — easier — use the built-in **記事管理 (article admin)**
+panel at `/admin`, a simple blog-style editor (think Ameba Blog): fill in a
+form, click publish, and it saves the article to the site automatically.
 
 This README assumes you are **not** a professional developer. Every step is
 spelled out.
@@ -46,68 +47,102 @@ Then open [http://localhost:3000](http://localhost:3000) in your browser.
 This is a live preview — as you edit and save files, the page updates
 automatically. Press `Ctrl+C` in the terminal to stop it.
 
-## 3. How to add a new story
+## 3. Setting up the article admin panel (one-time)
 
-Open [`lib/articles.ts`](lib/articles.ts) in any text editor (VS Code is a
-good free option). Near the top of the file you'll see a long list of
-article entries inside `[` and `]`. Copy one entire entry (from `{` to the
-matching `},`), paste it at the top of the list, and edit the fields:
+The admin panel (`/admin` on your live site) lets you write and publish
+articles from a form in your browser — no code, no text editor. It needs a
+one-time setup so GitHub knows to trust it. This only has to be done once,
+by whoever owns the GitHub account.
 
-```ts
-{
-  slug: "your-article-url-slug",       // becomes chutokanga.com/stories/your-article-url-slug
-  title: "記事タイトル",                  // the Japanese headline — required
-  titleEn: "English Title",             // optional small English subtitle shown under the headline
-  dek: "見出し下の一文（サブタイトル）",
-  excerpt: "一覧ページに表示される要約文。2行程度。",
-  category: "hotels",                   // one of: hotels, dining, fashion-beauty,
-                                         // events, art-culture, architecture-travel
-  location: "都市名、国名",
-  date: "2026-08-18",                   // YYYY-MM-DD — controls sort order (newest first)
-  author: "中東閑雅編集部",                // who wrote it — shown on the article page
-  photographyCredit: "Photography — Chūtō Kanga",  // optional — omit the line to hide it
-  readingTime: "5分",
-  heroImage: "/images/articles/your-image.jpg",     // see "Adding an image" below
-  featured: false,                      // true = eligible for the homepage's Featured spots
-  body: [
-    "第一段落。",
-    "第二段落。",
-    "第三段落…",
-  ],
-}
+1. Go to [github.com/settings/developers](https://github.com/settings/developers)
+   → **OAuth Apps** → **New OAuth App**.
+2. Fill in:
+   - **Application name**: anything, e.g. `中東閑雅 CMS`
+   - **Homepage URL**: `https://chuto-kanga.vercel.app` (or your own domain)
+   - **Authorization callback URL**: `https://chuto-kanga.vercel.app/api/callback`
+3. Click **Register application**. You'll see a **Client ID** — copy it.
+4. Click **Generate a new client secret** — copy that too (you won't be able
+   to see it again, so copy it now).
+5. In your [Vercel project](https://vercel.com), go to **Settings →
+   Environment Variables** and add two variables:
+   - `OAUTH_CLIENT_ID` — paste the Client ID
+   - `OAUTH_CLIENT_SECRET` — paste the Client Secret
+6. Redeploy the site (Vercel → **Deployments** → **⋯** → **Redeploy** on the
+   latest one) so it picks up the new variables.
+
+That's it — this never needs to be repeated unless you create a new OAuth
+App. Anyone with push access to the GitHub repository can now log into
+`/admin` with their GitHub account and publish articles.
+
+## 4. How to add a new story (the easy way)
+
+1. Go to `https://chuto-kanga.vercel.app/admin/index.html` (bookmark it).
+2. Click **Login with GitHub** the first time.
+3. Click **記事** in the sidebar, then **New 記事**.
+4. Fill in the form — title, category, location, date, hero image, body
+   text. Every field has a Japanese label explaining what it's for.
+5. Click **Publish** (top right). That's it — within a minute or two the
+   article is live on the site, automatically, no other steps required.
+
+Behind the scenes, publishing saves a Markdown file into
+`content/articles/` and uploads any image you attached into
+`public/images/articles/` — both committed straight to GitHub, which
+triggers a new Vercel deployment automatically, the same way editing code
+does.
+
+**Editing or deleting an article** works the same way: open it from the
+記事 list in `/admin`, change the fields (or click the trash icon to
+delete), and publish.
+
+### The manual way (optional, for advanced editing)
+
+Each article is a Markdown file at `content/articles/your-slug.md`. You can
+open and edit these directly in a text editor if you prefer — the format is
+a block of `key: value` fields at the top, then the article body below:
+
+```md
+---
+slug: "your-article-url-slug"
+title: "記事タイトル"
+titleEn: "English Title"
+dek: "見出し下の一文"
+excerpt: "一覧ページに表示される要約文。"
+category: "hotels"
+location: "都市名、国名"
+date: "2026-08-18"
+author: "中東閑雅編集部"
+photographyCredit: "Photography — Chūtō Kanga"
+readingTime: "5分"
+heroImage: "/images/articles/your-image.jpg"
+featured: false
+---
+
+第一段落。
+
+第二段落。
 ```
 
-Every field is required except `titleEn`, `photographyCredit`, and
-`featured` (which you can simply leave out). Save the file — that's it, no
-other file needs to change. The story automatically appears on `/stories`
-and on its category page. `featured: true` makes it eligible to appear in
-the homepage's Featured section (see the next section for exactly which
-stories the homepage shows).
+`category` must be one of: `hotels`, `dining`, `fashion-beauty`, `events`,
+`art-culture`, `architecture-travel`. Paragraphs in the body are separated
+by a blank line. Whichever way you edit — panel or file — the result is
+identical.
 
-To remove a story, delete its whole `{ ... }` entry from the array. To edit
-an existing one, just change the text inside it and save.
+## 5. Adding or replacing an image
 
-## 4. Adding or replacing an image
+**Via the admin panel:** the "メイン画像" field is an upload button — pick a
+photo from your computer and it's handled automatically (uploaded,
+optimized, and linked).
 
-1. Put your image file into the `public/images/articles/` folder (create
-   that folder if it doesn't already exist — it's inside the project, at
-   `chuto-kanga/public/images/articles/`). Use `.jpg` or `.webp`. Try to
-   keep each file under roughly 500KB so pages load quickly — most photo
-   editing tools and free online compressors (e.g. squoosh.app) can do this.
-2. Set the article's `heroImage` field to that file's path, starting with
-   `/images/articles/`, e.g. `"/images/articles/al-ula-hotel.jpg"`.
-
-Images use Next.js's built-in image optimizer, so they're automatically
-resized and lazy-loaded for you — you don't need to create multiple sizes
-yourself.
+**Manually:** put the file in `public/images/articles/` (`.jpg` or `.webp`,
+ideally under ~500KB — squoosh.app is a free online compressor), then set
+`heroImage` to its path, e.g. `"/images/articles/al-ula-hotel.jpg"`.
 
 The site currently ships with generated placeholder illustrations (soft
 duotone shapes, not real photos) in `public/images/placeholders/`, used by
-the ten sample stories and a couple of homepage sections. Swap any of them
-out at any time by pointing `heroImage` at a real photo instead — no code
-changes needed.
+the ten sample stories. Swap any of them out at any time by pointing
+`heroImage` at a real photo instead.
 
-## 5. Changing which stories appear on the homepage
+## 6. Changing which stories appear on the homepage
 
 Unlike `/stories` (which lists everything automatically), the homepage is
 hand-curated — each section names a specific story on purpose, the way a
@@ -120,19 +155,22 @@ const feature = getArticle("amanoi-al-ula-desert-silence")!;
 ```
 
 Each of these lines names one story by its `slug`. Replace the slug in the
-quotes with the slug of any story from `lib/articles.ts` to swap it in. The
-homepage has seven such slots: one large Feature Story, two "Latest" stories,
-one Culture feature, two Dining stories, and one Travel/Hotels feature — plus
-the "Events" list, which is edited separately (see below).
+quotes with the slug of any story to swap it in. The homepage has seven such
+slots: one large Feature Story, two "Latest" stories, one Culture feature,
+two Dining stories, and one Travel/Hotels feature — plus the "Events" list,
+which is edited separately (see below). This is the one part of publishing
+a story that still needs a code edit — the admin panel adds stories to
+`/stories` and category pages automatically, but doesn't rearrange the
+homepage for you.
 
-## 6. Editing the homepage Events list
+## 7. Editing the homepage Events list
 
 The quiet text listing in the homepage's "Events" section is separate from
 full articles — it's simple upcoming-event entries (title, location, date)
 in [`lib/events.ts`](lib/events.ts), not tied to `/stories`. Edit that array
 directly; no image or article body required.
 
-## 7. Editing categories
+## 8. Editing categories
 
 Categories live in [`lib/categories.ts`](lib/categories.ts). There are six:
 Hotels, Dining, Fashion & Beauty, Events, Art & Culture, Architecture &
@@ -143,10 +181,10 @@ re-describing a category only requires editing `lib/categories.ts` — just
 make sure every article's `category` field still matches an existing
 category `slug`.
 
-## 8. Editing site-wide text (brand copy, contact email)
+## 9. Editing site-wide text (brand copy, contact email)
 
-- Global site copy (nav labels, footer, homepage section text, About, Work
-  With Us) lives directly in each page/component file under `app/` and
+- Global site copy (nav labels, footer, homepage section text, About,
+  Partnerships) lives directly in each page/component file under `app/` and
   `components/` — open the relevant page and edit the Japanese text in
   place.
 - The contact email used across the site (Contact page, mailto links,
@@ -158,13 +196,13 @@ category `slug`.
 - `SOCIAL_INSTAGRAM` in the same file is a placeholder — update it once a
   real Instagram account exists; it's linked from the footer.
 
-## 9. Editing the top navigation
+## 10. Editing the top navigation
 
 The header and mobile-menu links live in [`lib/nav.ts`](lib/nav.ts) as one
 list — add, remove, or relabel an entry there and both the desktop nav and
 the mobile full-screen menu update together.
 
-## 10. How the Contact form works
+## 11. How the Contact form works
 
 It doesn't use a backend or database (intentionally, to keep this a
 zero-maintenance side project). Submitting it opens the visitor's own email
@@ -180,9 +218,10 @@ for now. If you want one later, a service like Buttondown or Mailchimp can
 be wired up with just a plain HTML form (no backend code needed on this
 site's side).
 
-## 11. Checking your work before publishing
+## 12. Checking your work before publishing
 
-Before you deploy, always run:
+If you edited files directly (not via `/admin`), always run this before
+deploying:
 
 ```bash
 npm run build
@@ -190,19 +229,23 @@ npm run build
 
 This does the same thing the live website will do, and will tell you
 immediately (in red text) if something is broken — for example, a typo in
-`lib/articles.ts` that breaks the file's structure. If it finishes with a
-route list and no red errors, you're safe to deploy. `npm run dev` (used for
-day-to-day editing) is more forgiving and won't always catch every mistake.
+an article's frontmatter that breaks the file's structure. If it finishes
+with a route list and no red errors, you're safe to deploy. `npm run dev`
+(used for day-to-day editing) is more forgiving and won't always catch
+every mistake. Articles published through `/admin` don't need this step —
+the panel only lets you fill in valid fields.
 
-## 12. Environment variables
+## 13. Environment variables
 
-**None are required.** This project has no database, no API keys, and no
-`.env` file — every piece of content is a plain file in `lib/`, so there is
-nothing to configure in Vercel's "Environment Variables" settings screen.
-When you connect the repository to Vercel, you can leave that section empty
-and deploy as-is.
+Only needed for the `/admin` panel described in section 3:
 
-## 13. Deploying to Vercel (putting the site on the internet)
+- `OAUTH_CLIENT_ID` — from your GitHub OAuth App
+- `OAUTH_CLIENT_SECRET` — from your GitHub OAuth App
+
+Nothing else requires configuration — there's no database or other API key
+anywhere in this project.
+
+## 14. Deploying to Vercel (putting the site on the internet)
 
 [Vercel](https://vercel.com) is the company that makes Next.js, and hosting
 a Next.js site there is free for a project this size and requires no server
@@ -223,16 +266,22 @@ setup.
    `.vercel.app` one, go to your project's **Settings → Domains** in Vercel
    and follow the instructions there to connect it. Also update `SITE_URL`
    in `lib/site.ts` to match, and redeploy (see below).
+7. Set up the admin panel — see section 3.
 
-## 14. Updating the site after it's already deployed
+## 15. Updating the site after it's already deployed
 
-This is the normal day-to-day workflow once you're live:
+Two workflows, depending on what you're changing:
 
-1. Edit `lib/articles.ts` (or any file) on your computer, following the
-   sections above.
+**Adding/editing an article** — just use `/admin` (section 4). Publishing
+there commits straight to GitHub and Vercel redeploys automatically within
+a minute or two.
+
+**Everything else** (design, homepage layout, navigation, etc.):
+
+1. Edit the relevant file on your computer, following the sections above.
 2. Run `npm run dev` and check `http://localhost:3000` to make sure it
    looks right.
-3. Run `npm run build` to confirm nothing is broken (see section 11).
+3. Run `npm run build` to confirm nothing is broken (see section 12).
 4. Save (commit) and push your changes to GitHub.
 5. Vercel automatically notices the update and redeploys the live site
    within a minute or two — you don't need to do anything else. Refresh the
@@ -257,32 +306,43 @@ reduced-motion visitors. To preview it again during development, clear the
 
 ```
 app/                    Pages (routes), one folder per URL
-  page.tsx               Home — hand-curated, see section 5
+  page.tsx               Home — hand-curated, see section 6
   stories/                Stories index + /stories/[slug] article pages
   fashion/, travel/, dining/, culture/    The four featured category pages
   categories/              Full category index + /categories/[slug] (hotels, events)
-  about/, work-with-us/, contact/
+  about/, partnerships/, contact/
+  api/auth/, api/callback/  GitHub OAuth for the /admin panel (section 3)
   not-found.tsx             Custom 404 page
   sitemap.ts, robots.ts
 
 components/              Shared UI (Header, Footer, ArticleCard, etc.)
   motion/                  Reveal / RevealImage / tilt / parallax / reduced-motion hooks
 
+content/articles/        ← one Markdown file per story (edit here or via /admin)
+
+public/
+  admin/                  The article admin panel (index.html + config.yml)
+  images/                 Static images (add your photography here)
+
 lib/
-  articles.ts             ← edit this to add/remove/update stories
+  articles.ts             Reads articles-data.json (generated — don't edit it directly)
+  articles-data.json       Auto-generated from content/articles/*.md — not committed
   categories.ts             ← the 6 categories + their web addresses
   events.ts                   ← homepage Events list entries
   nav.ts                        ← top navigation links
   site.ts                          ← contact email, site URL, Instagram
   types.ts                            ← TypeScript shapes for Article/Category
 
-public/images/           Static images (add your photography here)
-scripts/generate-placeholders.mjs   Regenerates the placeholder SVG artwork
-                                     (only needed if you want more placeholders)
+scripts/
+  build-articles.mjs       Converts content/articles/*.md into lib/articles-data.json
+                            (runs automatically before `npm run dev` / `npm run build`)
+  generate-placeholders.mjs  Regenerates the placeholder SVG artwork
+                              (only needed if you want more placeholders)
 ```
 
 ## Deploying elsewhere
 
-While section 13 covers Vercel (the easiest option), this is a standard
+While section 14 covers Vercel (the easiest option), this is a standard
 Next.js app and deploys equally well to Netlify or any Node hosting
-provider. There's no database or environment variable required.
+provider. The `/admin` panel specifically needs the two OAuth environment
+variables from section 13 wherever it's hosted.
