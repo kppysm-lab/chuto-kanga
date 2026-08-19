@@ -84,6 +84,15 @@ App. Anyone with push access to the GitHub repository can now log into
 5. Click **Publish** (top right). That's it — within a minute or two the
    article is live on the site, automatically, no other steps required.
 
+**Adding a photo inside the body** (not just the hero image): put your
+cursor where you want it and use the image button in the body editor's
+toolbar.
+
+**Embedding an Instagram post**: paste the post's URL
+(`https://www.instagram.com/p/...` or `/reel/...`) on its own line, with
+nothing else in that paragraph. It renders as a live embedded post — no
+extra setup needed.
+
 Behind the scenes, publishing saves a Markdown file into
 `content/articles/` and uploads any image you attached into
 `public/images/articles/` — both committed straight to GitHub, which
@@ -112,20 +121,21 @@ location: "都市名、国名"
 date: "2026-08-18"
 author: "中東閑雅編集部"
 photographyCredit: "Photography — Chūtō Kanga"
-readingTime: "5分"
 heroImage: "/images/articles/your-image.jpg"
 featured: false
 ---
 
-第一段落。
+第一段落。**太字**や[リンク](https://example.com)も使えます。
 
-第二段落。
+![説明文](/images/articles/inline-photo.jpg)
+
+https://www.instagram.com/p/some-post-id/
 ```
 
 `category` must be one of: `hotels`, `dining`, `fashion-beauty`, `events`,
-`art-culture`, `architecture-travel`. Paragraphs in the body are separated
-by a blank line. Whichever way you edit — panel or file — the result is
-identical.
+`art-culture`, `architecture-travel`. Paragraphs (including images and
+Instagram embeds) are separated by a blank line. Whichever way you edit —
+panel or file — the result is identical.
 
 ## 5. Adding or replacing an image
 

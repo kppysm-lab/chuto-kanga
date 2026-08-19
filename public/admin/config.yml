@@ -90,3 +90,4 @@ collections:
         widget: "markdown"
         buttons: ["bold", "italic", "link"]
         editor_components: ["image"]
+        hint: "Instagramの投稿を埋め込みたい場合は、投稿のURL（https://www.instagram.com/p/... または /reel/...）だけを1つの段落として貼り付けてください（前後に文章がない、独立した行にすること）。"

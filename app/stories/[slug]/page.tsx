@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import Container from "@/components/Container";
 import ArticleCard from "@/components/ArticleCard";
+import ArticleBody from "@/components/ArticleBody";
 import RevealImage from "@/components/motion/RevealImage";
 import Reveal from "@/components/motion/Reveal";
 import { articles, getArticle, getArticlesByCategory } from "@/lib/articles";
@@ -112,13 +113,7 @@ export default async function StoryPage({
           {article.dek}
         </p>
 
-        <div className="prose-editorial mt-10 space-y-6">
-          {article.body.map((paragraph, i) => (
-            <p key={i} className="text-[17px] leading-[1.9] text-ink/85">
-              {paragraph}
-            </p>
-          ))}
-        </div>
+        <ArticleBody body={article.body} />
       </Container>
 
       {related.length > 0 ? (
