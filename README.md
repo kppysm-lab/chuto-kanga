@@ -356,3 +356,4 @@ While section 14 covers Vercel (the easiest option), this is a standard
 Next.js app and deploys equally well to Netlify or any Node hosting
 provider. The `/admin` panel specifically needs the two OAuth environment
 variables from section 13 wherever it's hosted.
+<!-- deploy connection test 2026-08-19T12:25:25Z -->
