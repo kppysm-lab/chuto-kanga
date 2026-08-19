@@ -56,7 +56,10 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   verification: {
-    google: "KYc8yNUAZIySY8h-PNMC6pj-t0uoaX4Y3woT4tavUgY",
+    google: [
+      "KYc8yNUAZIySY8h-PNMC6pj-t0uoaX4Y3woT4tavUgY",
+      "TSALxZ0_D1kGGqibONuqLPogFsZFoFo9MxVS8N2lfEw",
+    ],
   },
   openGraph: {
     title: "中東閑雅 CHŪTŌ KANGA",
