@@ -55,6 +55,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
+  verification: {
+    google: "KYc8yNUAZIySY8h-PNMC6pj-t0uoaX4Y3woT4tavUgY",
+  },
   openGraph: {
     title: "中東閑雅 CHŪTŌ KANGA",
     description: "日本の美意識で、中東を紐解く。",
