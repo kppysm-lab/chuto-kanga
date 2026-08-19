@@ -8,18 +8,7 @@ category: art-culture
 location: バーレーン
 date: 2026-08-19
 author: 中東閑雅編集部
-heroImage: <div class="getty embed image"
-  style="background-color:#fff;display:inline-block;font-family:Roboto,sans-serif;color:#a7a7a7;font-size:11px;width:100%;max-width:594px;"><div
-  style="padding:0;margin:0;text-align:left;"><a
-  href="https://www.gettyimages.com/detail/2218264900" target="_blank"
-  style="color:#a7a7a7;text-decoration:none;font-weight:normal
-  !important;border:none;display:inline-block;">Embed from Getty
-  Images</a></div><div
-  style="overflow:hidden;position:relative;height:0;padding:61.616165% 0 0
-  0;width:100%;"><iframe
-  src="//embed.gettyimages.com/embed/2218264900?et=TWwyLD7EThB-qPqgh9TpZA&tld=com&sig=L4Fupy1ZsK1Gqt22pFIBaOXrOgVk5H1qgCCj5R1Fppc=&caption=true&ver=1"
-  scrolling="no" frameborder="0" width="594" height="366"
-  style="display:inline-block;position:absolute;top:0;left:0;width:100%;height:100%;margin:0;"></iframe></div></div>
+heroImage: /images/articles/gettyimages-2218264900-594x594.jpg
 featured: true
 ---
 **石油より前、この国を支えていたのは真珠だった**
