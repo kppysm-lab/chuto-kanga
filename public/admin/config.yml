@@ -75,11 +75,6 @@ collections:
         widget: "string"
         required: false
 
-      - label: "読了目安（例: 6分）"
-        name: "readingTime"
-        widget: "string"
-        default: "5分"
-
       - label: "メイン画像"
         name: "heroImage"
         widget: "image"
@@ -94,4 +89,4 @@ collections:
         name: "body"
         widget: "markdown"
         buttons: ["bold", "italic", "link"]
-        editor_components: []
+        editor_components: ["image"]

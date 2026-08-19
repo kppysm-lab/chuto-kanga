@@ -24,7 +24,6 @@ export interface Article {
   date: string;
   author: string;
   photographyCredit?: string;
-  readingTime: string;
   heroImage: string;
   featured?: boolean;
   body: string[];

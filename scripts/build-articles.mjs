@@ -33,7 +33,6 @@ const articles = files.map((file) => {
     date: toDateString(data.date),
     author: data.author,
     photographyCredit: data.photographyCredit || undefined,
-    readingTime: data.readingTime,
     heroImage: data.heroImage,
     featured: data.featured || undefined,
     body,
