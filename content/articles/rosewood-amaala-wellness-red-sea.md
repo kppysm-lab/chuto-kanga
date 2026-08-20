@@ -1,6 +1,6 @@
 ---
 slug: rosewood-amaala-wellness-red-sea
-title: Rosewood AMAALA――紅海で再定義される「ウェルネス」と土地性
+title: Rosewood AMAALA―紅海で再定義される「ウェルネス」と土地性
 titleEn: Rosewood AMAALA — Redefining Wellness Through the Landscape of the Red Sea
 dek: 紅海とヒジャーズ山脈のあいだに生まれたRosewood
   AMAALA。ここで再考されているのは、スパや施術だけではない「ウェルネス」と、その土地だからこそ成立するラグジュアリーのかたちだ。
