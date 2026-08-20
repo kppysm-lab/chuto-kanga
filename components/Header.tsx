@@ -8,6 +8,7 @@ import MobileMenu from "./MobileMenu";
 import SearchOverlay from "./SearchOverlay";
 import { primaryNav } from "@/lib/nav";
 import { getLangSwitch, localizeHref } from "@/lib/lang";
+import GoogleTranslate from "./GoogleTranslate";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -58,6 +59,7 @@ export default function Header() {
           >
             {langSwitch.label}
           </Link>
+          <GoogleTranslate />
         </nav>
 
         <button
