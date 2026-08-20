@@ -27,14 +27,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   const enRoutes = [
-    { url: `${SITE_URL}/en`, lastModified: new Date() },
-    { url: `${SITE_URL}/en/stories`, lastModified: new Date() },
-    { url: `${SITE_URL}/en/about`, lastModified: new Date() },
-    ...articles.map((a) => ({
-      url: `${SITE_URL}/en/stories/${a.slug}`,
-      lastModified: a.date,
-    })),
-  ];
+    "/en",
+    "/en/stories",
+    "/en/about",
+    "/en/partnerships",
+    "/en/contact",
+    "/en/fashion",
+    "/en/travel",
+    "/en/dining",
+    "/en/culture",
+  ].map((route) => ({
+    url: `${SITE_URL}${route}`,
+    lastModified: new Date(),
+  }));
 
-  return [...staticRoutes, ...categoryRoutes, ...articleRoutes, ...enRoutes];
+  const enArticleRoutes = articles.map((a) => ({
+    url: `${SITE_URL}/en/stories/${a.slug}`,
+    lastModified: a.date,
+  }));
+
+  return [
+    ...staticRoutes,
+    ...categoryRoutes,
+    ...articleRoutes,
+    ...enRoutes,
+    ...enArticleRoutes,
+  ];
 }

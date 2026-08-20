@@ -57,10 +57,10 @@ export default function MobileMenu({
       </nav>
 
       <div className="flex shrink-0 flex-col gap-3 px-6 pb-10 text-sm text-ink/50">
-        <Link href="/partnerships" onClick={onClose} className="hover:text-vermilion">
+        <Link href={localizeHref(pathname, "/partnerships")} onClick={onClose} className="hover:text-vermilion">
           Partnerships
         </Link>
-        <Link href="/contact" onClick={onClose} className="hover:text-vermilion">
+        <Link href={localizeHref(pathname, "/contact")} onClick={onClose} className="hover:text-vermilion">
           Contact
         </Link>
         <Link href={langSwitch.href} onClick={onClose} className="hover:text-vermilion">

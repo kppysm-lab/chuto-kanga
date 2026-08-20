@@ -25,13 +25,13 @@ export default function Footer() {
           <Link href={localizeHref(pathname, "/about")} className="hover:text-vermilion">
             About
           </Link>
-          <Link href="/partnerships" className="hover:text-vermilion">
+          <Link href={localizeHref(pathname, "/partnerships")} className="hover:text-vermilion">
             Partnerships
           </Link>
           <a href={SOCIAL_INSTAGRAM} target="_blank" rel="noreferrer" className="hover:text-vermilion">
             Instagram
           </a>
-          <Link href="/contact" className="hover:text-vermilion">
+          <Link href={localizeHref(pathname, "/contact")} className="hover:text-vermilion">
             Contact
           </Link>
         </nav>

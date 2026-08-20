@@ -11,6 +11,7 @@ export interface Category {
   nameJa: string;
   nameEn: string;
   description: string;
+  descriptionEn: string;
 }
 
 export interface Article {
