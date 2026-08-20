@@ -17,23 +17,17 @@ featured: true
 ---
 Rosewood AMAALAは、サウジアラビア北西部の紅海沿岸で進む大規模な観光開発「AMAALA」の中核エリア、Triple Bayに位置するウェルネスリゾートだ。
 
+![](/images/articles/4f3640ed-b48e-48ac-b55b-96ec4e0ded78.jpg)
+
 AMAALAは、石油依存からの経済多角化を進めるサウジアラビアのVision 2030とも結びつく観光開発のひとつ。
 
 紅海の自然環境を生かしながら、ウェルネス、文化、ラグジュアリーを軸とした新しい滞在地を構想している。
 
-
-
 Rosewood AMAALAは全110室。スイートやパビリオン、ウェルネスに特化したAsaya Lodge、プライベートプールを備えるヴィラなどで構成され、さらに26のRosewood Residencesも設けられている。
-
-
 
 AMAALA全体が掲げているのは、100％再生可能エネルギーによる運営や、ゼロカーボン、埋め立て廃棄物ゼロを目指す再生型観光という考え方だ。
 
 
-
-つまりRosewood AMAALAを考えるときに重要なのは、「どれほど豪華か」だけではない。
-
-110室のリゾートを、紅海という繊細な自然環境の中にどう置くのか。
 
 世界的なラグジュアリーブランドが、その土地の自然や文化とどう関係を結ぶのか。
 
@@ -41,7 +35,7 @@ AMAALA全体が掲げているのは、100％再生可能エネルギーによ�
 
 
 
-![](/images/articles/4f3640ed-b48e-48ac-b55b-96ec4e0ded78.jpg)
+![](/images/articles/rwaml_facilities_room_seaviewonebedroomprivatepoolvilla_hero.avif)
 
 **主役は、建築ではなく土地**
 
