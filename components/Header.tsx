@@ -7,7 +7,7 @@ import Container from "./Container";
 import MobileMenu from "./MobileMenu";
 import SearchOverlay from "./SearchOverlay";
 import { primaryNav } from "@/lib/nav";
-import { getLangSwitch } from "@/lib/lang";
+import { getLangSwitch, localizeHref } from "@/lib/lang";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -18,7 +18,11 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-line bg-paper">
       <Container className="flex h-20 items-center justify-between">
-        <Link href="/" className="flex flex-col leading-none" onClick={() => setMenuOpen(false)}>
+        <Link
+          href={localizeHref(pathname, "/")}
+          className="flex flex-col leading-none"
+          onClick={() => setMenuOpen(false)}
+        >
           <span className="font-serif text-lg tracking-[0.15em] text-ink">中東閑雅</span>
           <span className="mt-1 font-sans text-[10px] font-medium tracking-[0.32em] text-ink/40 uppercase">
             Chūtō Kanga
@@ -27,11 +31,12 @@ export default function Header() {
 
         <nav className="hidden items-center gap-7 md:flex">
           {primaryNav.map((link) => {
-            const active = pathname === link.href || pathname.startsWith(link.href + "/");
+            const href = localizeHref(pathname, link.href);
+            const active = pathname === href || pathname.startsWith(href + "/");
             return (
               <Link
                 key={link.href}
-                href={link.href}
+                href={href}
                 className={`text-sm tracking-[0.05em] transition-colors ${
                   active ? "text-vermilion" : "text-ink/70 hover:text-vermilion"
                 }`}

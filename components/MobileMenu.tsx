@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { primaryNav } from "@/lib/nav";
-import { getLangSwitch } from "@/lib/lang";
+import { getLangSwitch, localizeHref } from "@/lib/lang";
 
 export default function MobileMenu({
   open,
@@ -37,7 +37,7 @@ export default function MobileMenu({
         {primaryNav.map((link) => (
           <Link
             key={link.href}
-            href={link.href}
+            href={localizeHref(pathname, link.href)}
             onClick={onClose}
             className="border-b border-line py-4 font-serif text-4xl leading-tight text-ink"
           >

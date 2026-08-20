@@ -29,6 +29,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const enRoutes = [
     { url: `${SITE_URL}/en`, lastModified: new Date() },
     { url: `${SITE_URL}/en/stories`, lastModified: new Date() },
+    { url: `${SITE_URL}/en/about`, lastModified: new Date() },
     ...articles.map((a) => ({
       url: `${SITE_URL}/en/stories/${a.slug}`,
       lastModified: a.date,

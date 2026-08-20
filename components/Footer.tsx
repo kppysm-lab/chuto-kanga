@@ -1,8 +1,14 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import Container from "./Container";
 import { SOCIAL_INSTAGRAM } from "@/lib/site";
+import { localizeHref } from "@/lib/lang";
 
 export default function Footer() {
+  const pathname = usePathname();
+
   return (
     <footer className="border-t border-line bg-paper">
       <Container className="py-16">
@@ -13,10 +19,10 @@ export default function Footer() {
         <p className="mt-3 max-w-xs text-sm text-ink/50">日本の美意識で、中東を紐解く。</p>
 
         <nav className="mt-10 flex flex-wrap gap-x-8 gap-y-3 border-t border-line pt-8 text-sm text-ink/70">
-          <Link href="/stories" className="hover:text-vermilion">
+          <Link href={localizeHref(pathname, "/stories")} className="hover:text-vermilion">
             Stories
           </Link>
-          <Link href="/about" className="hover:text-vermilion">
+          <Link href={localizeHref(pathname, "/about")} className="hover:text-vermilion">
             About
           </Link>
           <Link href="/partnerships" className="hover:text-vermilion">
