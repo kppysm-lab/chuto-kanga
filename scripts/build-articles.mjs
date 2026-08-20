@@ -12,9 +12,15 @@ function toDateString(value) {
 
 const files = readdirSync(contentDir).filter((f) => f.endsWith(".md"));
 
-const articles = files.map((file) => {
+const articles = files.flatMap((file) => {
   const raw = readFileSync(path.join(contentDir, file), "utf-8");
   const { data, content } = matter(raw);
+
+  // Unchecking "サイトに公開する" in the admin panel sets published: false,
+  // which excludes the article from the build entirely — no route is
+  // generated, so it's fully hidden (not just delisted) without deleting
+  // the file.
+  if (data.published === false) return [];
 
   const body = content
     .trim()
@@ -30,24 +36,26 @@ const articles = files.map((file) => {
         .filter(Boolean)
     : undefined;
 
-  return {
-    slug: data.slug,
-    title: data.title,
-    titleEn: data.titleEn || undefined,
-    dek: data.dek,
-    dekEn: data.dekEn || undefined,
-    excerpt: data.excerpt,
-    excerptEn: data.excerptEn || undefined,
-    category: data.category,
-    location: data.location,
-    date: toDateString(data.date),
-    author: data.author,
-    photographyCredit: data.photographyCredit || undefined,
-    heroImage: data.heroImage,
-    featured: data.featured || undefined,
-    body,
-    bodyEn,
-  };
+  return [
+    {
+      slug: data.slug,
+      title: data.title,
+      titleEn: data.titleEn || undefined,
+      dek: data.dek,
+      dekEn: data.dekEn || undefined,
+      excerpt: data.excerpt,
+      excerptEn: data.excerptEn || undefined,
+      category: data.category,
+      location: data.location,
+      date: toDateString(data.date),
+      author: data.author,
+      photographyCredit: data.photographyCredit || undefined,
+      heroImage: data.heroImage,
+      featured: data.featured || undefined,
+      body,
+      bodyEn,
+    },
+  ];
 });
 
 articles.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());

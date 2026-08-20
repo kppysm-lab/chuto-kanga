@@ -81,8 +81,21 @@ App. Anyone with push access to the GitHub repository can now log into
 3. Click **記事** in the sidebar, then **New 記事**.
 4. Fill in the form — title, category, location, date, hero image, body
    text. Every field has a Japanese label explaining what it's for.
-5. Click **Publish** (top right). That's it — within a minute or two the
-   article is live on the site, automatically, no other steps required.
+5. Click **Save** (top right) to save a draft, or **Publish** to save it and
+   put it live at the same time. See "Drafts" and "Hiding a story" below for
+   the difference.
+
+**Drafts**: clicking **Save** doesn't publish anything — it saves your
+progress as a draft you can come back to. Find it later under
+**Workflow** in the left sidebar (grouped as Drafts / In Review / Ready).
+Open it from there and use its **Publish** button when you want it to go
+live. Nothing appears on the actual site until you publish.
+
+**Hiding a story** (without deleting it): open the story from the 記事
+list and un-check **「サイトに公開する」** near the bottom of the form,
+then publish that change. The story disappears from the site entirely —
+including its own page, which returns a normal 404 — without losing any
+of the content. Check the box again any time to bring it back.
 
 **Adding a photo inside the body** (not just the hero image): put your
 cursor where you want it and use the image button in the body editor's
@@ -123,6 +136,7 @@ author: "中東閑雅編集部"
 photographyCredit: "Photography — Chūtō Kanga"
 heroImage: "/images/articles/your-image.jpg"
 featured: false
+published: true
 ---
 
 第一段落。**太字**や[リンク](https://example.com)も使えます。
