@@ -69,7 +69,7 @@ Rosewood AMAALAでは、この思想がとりわけ重要になる。
 
 ![]()
 
-**https://www.instagram.com/p/DcLWhYzlgum/?img_index=2**
+https://www.instagram.com/p/DcLWhYzlgum/?img_index=2
 
 **「ウェルネス」は、スパだけではない**
 
@@ -120,6 +120,8 @@ Rosewood AMAALAの中心に置かれているのが、Rosewoodのウェルネス
 その結果として、自分の身体や感覚が戻ってくる。
 
 ここでは、その「戻ること」自体が、新しいラグジュアリーになろうとしている。
+
+
 
 **紅海という土地を、どう扱うか**
 
@@ -210,6 +212,8 @@ Rosewood AMAALAにも、それと響き合う考え方が見える。
 香り、素材、光、静けさは、その場所ならではのものになっているか。
 
 Rosewood AMAALAは、それらの問いを紅海という場所で試している。
+
+![](/images/articles/rwaml_facilities_room_seaviewonebedroomprivatepoolvilla_livingroom.avif)
 
 **サウジアラビアのラグジュアリーは、どこへ向かうのか**
 
