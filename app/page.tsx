@@ -7,24 +7,39 @@ import Reveal from "@/components/motion/Reveal";
 import RevealImage from "@/components/motion/RevealImage";
 import ParallaxImage from "@/components/motion/ParallaxImage";
 import TiltWrapper from "@/components/motion/TiltWrapper";
-import { getArticle, getLatestArticles } from "@/lib/articles";
+import { getLatestArticles } from "@/lib/articles";
 import { getCategory } from "@/lib/categories";
 import { events } from "@/lib/events";
 
 export default function Home() {
-  // The hero and "Latest" duo always show the three most recently
-  // published stories, so a new article appears here automatically —
-  // no code edit needed. The Culture/Dining/Travel sections below stay
-  // hand-picked, the way a magazine editor lays out a front page.
-  const [feature, latestA, latestB] = getLatestArticles(3);
+  const latest = getLatestArticles();
+  const feature = latest[0];
+
+  if (!feature) {
+    return (
+      <Container className="py-32 text-center">
+        <p className="text-ink/50">
+          まだ記事がありません。/admin から最初の記事を公開してみましょう。
+        </p>
+      </Container>
+    );
+  }
+
   const featureCategory = getCategory(feature.category)!;
 
-  const culture = getArticle("sharjah-calligraphy-revival")!;
+  // The hero always shows the most recent story, so a new article appears
+  // here automatically — no code edit needed. "Latest" shows the next two
+  // most recent. The Culture/Dining/Travel sections each pull the most
+  // recent story in that category and quietly disappear if none exists yet
+  // — the site stays presentable at any size, from one article to hundreds.
+  const rest = latest.slice(1);
+  const latestA = rest[0];
+  const latestB = rest[1];
 
-  const diningA = getArticle("beirut-table-generational-recipes")!;
-  const diningB = getArticle("riyadh-chefs-table-new-saudi-cuisine")!;
-
-  const travel = getArticle("muscat-coastline-architecture")!;
+  const culture = latest.find((a) => a.category === "art-culture");
+  const dining = latest.filter((a) => a.category === "dining");
+  const [diningA, diningB] = dining;
+  const travel = latest.find((a) => a.category === "architecture-travel");
 
   return (
     <>
@@ -73,108 +88,118 @@ export default function Home() {
       </section>
 
       {/* Latest — asymmetric duo */}
-      <section className="py-24 md:py-32">
-        <Container>
-          <Reveal>
-            <p className="text-xs tracking-[0.2em] text-ink/40 uppercase">Latest</p>
-          </Reveal>
-          <div className="mt-8 grid grid-cols-1 gap-12 md:grid-cols-12 md:gap-8">
-            <div className="md:col-span-7">
-              <Reveal>
-                <ArticleCard
-                  article={latestA}
-                  aspect="landscape"
-                  headlineSize="text-2xl md:text-3xl"
-                  index={2}
-                  sizes="(min-width: 768px) 58vw, 100vw"
-                />
-              </Reveal>
+      {latestA ? (
+        <section className="py-24 md:py-32">
+          <Container>
+            <Reveal>
+              <p className="text-xs tracking-[0.2em] text-ink/40 uppercase">Latest</p>
+            </Reveal>
+            <div className="mt-8 grid grid-cols-1 gap-12 md:grid-cols-12 md:gap-8">
+              <div className={latestB ? "md:col-span-7" : "md:col-span-12"}>
+                <Reveal>
+                  <ArticleCard
+                    article={latestA}
+                    aspect="landscape"
+                    headlineSize="text-2xl md:text-3xl"
+                    index={2}
+                    sizes="(min-width: 768px) 58vw, 100vw"
+                  />
+                </Reveal>
+              </div>
+              {latestB ? (
+                <div className="md:col-span-5 md:pt-20">
+                  <Reveal delay={120}>
+                    <ArticleCard
+                      article={latestB}
+                      aspect="portrait"
+                      headlineSize="text-xl"
+                      index={3}
+                      sizes="(min-width: 768px) 42vw, 100vw"
+                    />
+                  </Reveal>
+                </div>
+              ) : null}
             </div>
-            <div className="md:col-span-5 md:pt-20">
-              <Reveal delay={120}>
-                <ArticleCard
-                  article={latestB}
-                  aspect="portrait"
-                  headlineSize="text-xl"
-                  index={3}
-                  sizes="(min-width: 768px) 42vw, 100vw"
-                />
-              </Reveal>
-            </div>
-          </div>
-        </Container>
-      </section>
+          </Container>
+        </section>
+      ) : null}
 
       {/* Culture — typography-led feature */}
-      <section className="border-y border-line py-24 md:py-32">
-        <Container>
-          <div className="grid grid-cols-1 gap-12 md:grid-cols-12 md:items-center">
-            <div className="md:col-span-7">
-              <Reveal>
-                <EditorialMeta categoryEn="Culture" date={culture.date} />
-              </Reveal>
-              <Reveal delay={80}>
-                <blockquote className="mt-6 font-serif text-3xl leading-snug text-ink md:text-5xl">
-                  アラビア書道も日本の書も、線の勢いに精神が宿る。
-                </blockquote>
-              </Reveal>
-              <Reveal delay={160}>
-                <p className="mt-8 max-w-md text-sm leading-relaxed text-ink/60">
-                  {culture.excerpt}
-                </p>
-              </Reveal>
-              <Reveal delay={220}>
-                <div className="mt-7">
-                  <EditorialLink href={`/stories/${culture.slug}`}>Read the Story</EditorialLink>
-                </div>
-              </Reveal>
+      {culture ? (
+        <section className="border-y border-line py-24 md:py-32">
+          <Container>
+            <div className="grid grid-cols-1 gap-12 md:grid-cols-12 md:items-center">
+              <div className="md:col-span-7">
+                <Reveal>
+                  <EditorialMeta categoryEn="Culture" date={culture.date} />
+                </Reveal>
+                <Reveal delay={80}>
+                  <blockquote className="mt-6 font-serif text-3xl leading-snug text-ink md:text-5xl text-balance">
+                    {culture.dek}
+                  </blockquote>
+                </Reveal>
+                <Reveal delay={160}>
+                  <p className="mt-8 max-w-md text-sm leading-relaxed text-ink/60">
+                    {culture.excerpt}
+                  </p>
+                </Reveal>
+                <Reveal delay={220}>
+                  <div className="mt-7">
+                    <EditorialLink href={`/stories/${culture.slug}`}>Read the Story</EditorialLink>
+                  </div>
+                </Reveal>
+              </div>
+              <div className="md:col-span-5">
+                <Link href={`/stories/${culture.slug}`} aria-label={culture.title}>
+                  <RevealImage
+                    src={culture.heroImage}
+                    alt={culture.title}
+                    className="aspect-[3/4]"
+                    sizes="(min-width: 768px) 40vw, 100vw"
+                    interactive
+                  />
+                </Link>
+              </div>
             </div>
-            <div className="md:col-span-5">
-              <Link href={`/stories/${culture.slug}`} aria-label={culture.title}>
-                <RevealImage
-                  src={culture.heroImage}
-                  alt={culture.title}
-                  className="aspect-[3/4]"
-                  sizes="(min-width: 768px) 40vw, 100vw"
-                  interactive
-                />
-              </Link>
-            </div>
-          </div>
-        </Container>
-      </section>
+          </Container>
+        </section>
+      ) : null}
 
       {/* Dining */}
-      <section className="py-24 md:py-32">
-        <Container>
-          <div className="flex items-baseline justify-between border-b border-line pb-6">
-            <h2 className="font-serif text-2xl text-ink">Dining</h2>
-            <EditorialLink href="/dining">View All</EditorialLink>
-          </div>
-          <div className="mt-10 grid grid-cols-1 gap-10 sm:grid-cols-2">
-            <Reveal>
-              <ArticleCard
-                article={diningA}
-                aspect="landscape"
-                headlineSize="text-lg"
-                index={4}
-                showExcerpt={false}
-                sizes="(min-width: 640px) 50vw, 100vw"
-              />
-            </Reveal>
-            <Reveal delay={100}>
-              <ArticleCard
-                article={diningB}
-                aspect="landscape"
-                headlineSize="text-lg"
-                index={5}
-                showExcerpt={false}
-                sizes="(min-width: 640px) 50vw, 100vw"
-              />
-            </Reveal>
-          </div>
-        </Container>
-      </section>
+      {diningA ? (
+        <section className="py-24 md:py-32">
+          <Container>
+            <div className="flex items-baseline justify-between border-b border-line pb-6">
+              <h2 className="font-serif text-2xl text-ink">Dining</h2>
+              <EditorialLink href="/dining">View All</EditorialLink>
+            </div>
+            <div className="mt-10 grid grid-cols-1 gap-10 sm:grid-cols-2">
+              <Reveal>
+                <ArticleCard
+                  article={diningA}
+                  aspect="landscape"
+                  headlineSize="text-lg"
+                  index={4}
+                  showExcerpt={false}
+                  sizes="(min-width: 640px) 50vw, 100vw"
+                />
+              </Reveal>
+              {diningB ? (
+                <Reveal delay={100}>
+                  <ArticleCard
+                    article={diningB}
+                    aspect="landscape"
+                    headlineSize="text-lg"
+                    index={5}
+                    showExcerpt={false}
+                    sizes="(min-width: 640px) 50vw, 100vw"
+                  />
+                </Reveal>
+              ) : null}
+            </div>
+          </Container>
+        </section>
+      ) : null}
 
       {/* Visual Interlude */}
       <section>
@@ -191,43 +216,45 @@ export default function Home() {
       </section>
 
       {/* Travel / Hotels feature */}
-      <section className="py-24 md:py-32">
-        <Container>
-          <div className="grid grid-cols-1 gap-12 md:grid-cols-12 md:items-end">
-            <div className="md:col-span-5 md:pb-8">
-              <Reveal>
-                <EditorialMeta index={6} categoryEn="Travel" date={travel.date} />
-              </Reveal>
-              <Reveal delay={80}>
-                <h2 className="mt-4 font-serif text-3xl leading-snug text-ink md:text-5xl">
-                  {travel.title}
-                </h2>
-              </Reveal>
-              <Reveal delay={160}>
-                <p className="mt-5 max-w-sm text-sm leading-relaxed text-ink/60">
-                  {travel.excerpt}
-                </p>
-              </Reveal>
-              <Reveal delay={220}>
-                <div className="mt-7">
-                  <EditorialLink href={`/stories/${travel.slug}`}>Read the Story</EditorialLink>
-                </div>
-              </Reveal>
+      {travel ? (
+        <section className="py-24 md:py-32">
+          <Container>
+            <div className="grid grid-cols-1 gap-12 md:grid-cols-12 md:items-end">
+              <div className="md:col-span-5 md:pb-8">
+                <Reveal>
+                  <EditorialMeta index={6} categoryEn="Travel" date={travel.date} />
+                </Reveal>
+                <Reveal delay={80}>
+                  <h2 className="mt-4 font-serif text-3xl leading-snug text-ink md:text-5xl">
+                    {travel.title}
+                  </h2>
+                </Reveal>
+                <Reveal delay={160}>
+                  <p className="mt-5 max-w-sm text-sm leading-relaxed text-ink/60">
+                    {travel.excerpt}
+                  </p>
+                </Reveal>
+                <Reveal delay={220}>
+                  <div className="mt-7">
+                    <EditorialLink href={`/stories/${travel.slug}`}>Read the Story</EditorialLink>
+                  </div>
+                </Reveal>
+              </div>
+              <div className="md:col-span-7">
+                <Link href={`/stories/${travel.slug}`} aria-label={travel.title}>
+                  <ParallaxImage
+                    src={travel.heroImage}
+                    alt={travel.title}
+                    className="aspect-[4/3] md:aspect-[16/10]"
+                    sizes="(min-width: 768px) 58vw, 100vw"
+                    interactive
+                  />
+                </Link>
+              </div>
             </div>
-            <div className="md:col-span-7">
-              <Link href={`/stories/${travel.slug}`} aria-label={travel.title}>
-                <ParallaxImage
-                  src={travel.heroImage}
-                  alt={travel.title}
-                  className="aspect-[4/3] md:aspect-[16/10]"
-                  sizes="(min-width: 768px) 58vw, 100vw"
-                  interactive
-                />
-              </Link>
-            </div>
-          </div>
-        </Container>
-      </section>
+          </Container>
+        </section>
+      ) : null}
 
       {/* Events — quiet list */}
       <section className="border-t border-line py-24 md:py-32">

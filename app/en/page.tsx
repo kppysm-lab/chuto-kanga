@@ -21,6 +21,15 @@ export const metadata: Metadata = {
 export default function HomeEn() {
   const latest = getLatestArticles(7);
   const [feature, ...rest] = latest;
+
+  if (!feature) {
+    return (
+      <Container className="py-32 text-center">
+        <p className="text-ink/50">No stories published yet.</p>
+      </Container>
+    );
+  }
+
   const featureCategory = getCategory(feature.category)!;
 
   return (
