@@ -121,7 +121,7 @@ Rosewood AMAALAの中心に置かれているのが、Rosewoodのウェルネス
 
 ここでは、その「戻ること」自体が、新しいラグジュアリーになろうとしている。
 
-
+![](/images/articles/rosewood-.png)
 
 **紅海という土地を、どう扱うか**
 
