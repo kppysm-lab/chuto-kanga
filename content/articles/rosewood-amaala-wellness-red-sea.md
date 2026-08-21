@@ -14,6 +14,7 @@ date: 2026-08-20
 author: 中東閑雅編集部
 heroImage: /images/articles/63d7f8447590-d2d645ef-5044-4e3d-8737-f88cc9d47960.webp
 featured: true
+affiliateWidget: true
 ---
 Rosewood AMAALAは、サウジアラビア北西部の紅海沿岸で進む大規模な観光開発「AMAALA」の中核エリア、Triple Bayに位置するウェルネスリゾートだ。
 
