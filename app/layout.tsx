@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import IntroSequence from "@/components/IntroSequence";
+import TravelpayoutsDrive from "@/components/TravelpayoutsDrive";
 import { SITE_URL, SOCIAL_INSTAGRAM } from "@/lib/site";
 
 const shipporiMincho = Shippori_Mincho({
@@ -113,6 +114,7 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
         />
+        <TravelpayoutsDrive />
         <IntroSequence />
         <Header />
         <main className="flex-1">{children}</main>

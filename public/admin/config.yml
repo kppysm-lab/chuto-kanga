@@ -104,13 +104,6 @@ collections:
         default: true
         hint: "記事を削除せずに、一時的にサイトから隠すことができます。後でまたチェックを入れれば再公開されます。"
 
-      - label: "アフィリエイトウィジェットを有効にする（Travelpayouts）"
-        name: "affiliateWidget"
-        widget: "boolean"
-        required: false
-        default: false
-        hint: "ホテル・航空券の予約リンクなど、Travelpayoutsのアフィリエイト計測が必要な記事だけでオンにしてください。"
-
       - label: "本文（段落ごとに空行で区切ってください）"
         name: "body"
         widget: "markdown"

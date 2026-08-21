@@ -29,7 +29,6 @@ export interface Article {
   photographyCredit?: string;
   heroImage: string;
   featured?: boolean;
-  affiliateWidget?: boolean;
   body: string[];
   bodyEn?: string[];
 }

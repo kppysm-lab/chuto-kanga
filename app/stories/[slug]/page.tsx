@@ -4,7 +4,6 @@ import { notFound } from "next/navigation";
 import Container from "@/components/Container";
 import ArticleCard from "@/components/ArticleCard";
 import ArticleBody from "@/components/ArticleBody";
-import TravelpayoutsDrive from "@/components/TravelpayoutsDrive";
 import RevealImage from "@/components/motion/RevealImage";
 import Reveal from "@/components/motion/Reveal";
 import { articles, getArticle, getArticlesByCategory } from "@/lib/articles";
@@ -86,7 +85,6 @@ export default async function StoryPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
       />
-      {article.affiliateWidget ? <TravelpayoutsDrive /> : null}
       <RevealImage
         src={article.heroImage}
         alt={article.title}

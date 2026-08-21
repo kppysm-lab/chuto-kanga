@@ -52,7 +52,6 @@ const articles = files.flatMap((file) => {
       photographyCredit: data.photographyCredit || undefined,
       heroImage: data.heroImage,
       featured: data.featured || undefined,
-      affiliateWidget: data.affiliateWidget || undefined,
       body,
       bodyEn,
     },
