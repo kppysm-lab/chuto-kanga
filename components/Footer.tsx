@@ -36,9 +36,8 @@ export default function Footer() {
           </Link>
         </nav>
 
-        <div className="mt-10 flex flex-col gap-2 border-t border-line pt-6 text-xs text-ink/40 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-10 border-t border-line pt-6 text-xs text-ink/40">
           <p>&copy; {new Date().getFullYear()} Chūtō Kanga / 中東閑雅.</p>
-          <p>Independent Media, Tokyo</p>
         </div>
       </Container>
     </footer>

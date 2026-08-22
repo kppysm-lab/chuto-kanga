@@ -224,6 +224,9 @@ export default function AboutPage() {
 
         <div className="mt-14 border-t border-line pt-8">
           <p className="text-[17px] leading-[1.9] text-ink/80">
+            <Sentences text="中東閑雅は、ドバイ在住の日本人によって立ち上げられました。現地に暮らしているからこそ見える日常の解像度を大切にしています。" />
+          </p>
+          <p className="mt-4 text-[17px] leading-[1.9] text-ink/80">
             <Sentences text="中東閑雅では編集活動に加え、ホテル、レストラン、ブランド、イベント、文化施設などを対象に、記事・写真・映像・SNSコンテンツの制作、日本市場向けのプロモーションを行っています。" />
           </p>
           <div className="mt-8 flex flex-wrap gap-10">

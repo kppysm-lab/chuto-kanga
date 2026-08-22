@@ -44,6 +44,11 @@ const services = [
     title: "日本市場向けプロモーション",
     body: "日本語コンテンツの制作を通じて、日本の読者・旅行者・顧客とのコミュニケーションを支援します。",
   },
+  {
+    en: "Branding Advisory",
+    title: "ブランディング・アドバイザリー",
+    body: "中東市場における日本ブランドの展開を、企画・戦略の段階からご支援します。",
+  },
 ];
 
 const moodTone = {
@@ -120,7 +125,7 @@ export default function PartnershipsPage() {
       <Container className="mb-24 mt-16 max-w-5xl border-t border-line pt-10 md:mb-32 md:mt-20">
         <p className="text-xs tracking-[0.15em] text-ink/50 uppercase">Project Enquiries</p>
         <p className="mt-3 max-w-md text-sm leading-relaxed text-ink/70">
-          Sponsored Editorial、コンテンツ制作、SNS・ホスピタリティ・イベントプロモーションについてのご相談を承っています。
+          Sponsored Editorial、コンテンツ制作、SNS・ホスピタリティ・イベントプロモーション、ブランディング・アドバイザリーについてのご相談を承っています。
         </p>
         <div className="mt-6 flex flex-wrap gap-10">
           <EditorialLink href="/contact">Contact</EditorialLink>

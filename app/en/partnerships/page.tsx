@@ -38,6 +38,10 @@ const services = [
     en: "Japan-facing Promotion",
     body: "Communication support for Japanese readers, travelers, and customers, built around Japanese-language content.",
   },
+  {
+    en: "Branding Advisory",
+    body: "Supporting Japanese brands entering the Middle East market, from early-stage planning and strategy onward.",
+  },
 ];
 
 const moodTone = {
@@ -108,8 +112,8 @@ export default function PartnershipsPageEn() {
       <Container className="mb-24 mt-16 max-w-5xl border-t border-line pt-10 md:mb-32 md:mt-20">
         <p className="text-xs tracking-[0.15em] text-ink/50 uppercase">Project Enquiries</p>
         <p className="mt-3 max-w-md text-sm leading-relaxed text-ink/70">
-          We welcome enquiries about sponsored editorial, content production, and social,
-          hospitality, and event promotion.
+          We welcome enquiries about sponsored editorial, content production, social,
+          hospitality, and event promotion, and branding advisory.
         </p>
         <div className="mt-6 flex flex-wrap gap-10">
           <EditorialLink href="/en/contact">Contact</EditorialLink>
