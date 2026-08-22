@@ -91,6 +91,17 @@ collections:
         name: "heroImage"
         widget: "image"
 
+      - label: "メイン画像の表示位置"
+        name: "heroImagePosition"
+        widget: "select"
+        required: false
+        default: "center"
+        options:
+          - { label: "中央（標準）", value: "center" }
+          - { label: "上（人物の顔が上のほうにある写真向け）", value: "top" }
+          - { label: "下", value: "bottom" }
+        hint: "横長に切り抜いたときに顔や被写体が切れてしまう場合、ここで調整できます。"
+
       - label: "トップページ掲載候補にする"
         name: "featured"
         widget: "boolean"

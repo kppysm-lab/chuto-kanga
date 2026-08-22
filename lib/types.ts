@@ -28,6 +28,7 @@ export interface Article {
   author: string;
   photographyCredit?: string;
   heroImage: string;
+  heroImagePosition?: "top" | "center" | "bottom";
   featured?: boolean;
   body: string[];
   bodyEn?: string[];

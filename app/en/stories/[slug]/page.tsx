@@ -96,7 +96,13 @@ export default async function StoryPageEn({
         src={article.heroImage}
         alt={title}
         className="h-[60vh] min-h-[420px] w-full bg-ink"
-        imgClassName="opacity-90"
+        imgClassName={`opacity-90 ${
+          article.heroImagePosition === "top"
+            ? "object-top"
+            : article.heroImagePosition === "bottom"
+              ? "object-bottom"
+              : ""
+        }`}
         priority
       />
 

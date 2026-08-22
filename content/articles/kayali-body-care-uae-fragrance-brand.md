@@ -14,6 +14,7 @@ location: ドバイ、アラブ首長国連邦
 date: 2026-08-22
 author: 中東閑雅編集部
 heroImage: /images/articles/mona-kattan-kayali-yum-pistachio-social.jpg.webp
+heroImagePosition: top
 featured: false
 published: true
 ---

@@ -51,6 +51,7 @@ const articles = files.flatMap((file) => {
       author: data.author,
       photographyCredit: data.photographyCredit || undefined,
       heroImage: data.heroImage,
+      heroImagePosition: data.heroImagePosition || undefined,
       featured: data.featured || undefined,
       body,
       bodyEn,

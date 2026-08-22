@@ -39,6 +39,13 @@ export default function ArticleCard({
         src={article.heroImage}
         alt={title}
         className={`bg-paper-deep ${aspectClass[aspect]}`}
+        imgClassName={
+          article.heroImagePosition === "top"
+            ? "object-top"
+            : article.heroImagePosition === "bottom"
+              ? "object-bottom"
+              : ""
+        }
         sizes={sizes}
         interactive
       />
