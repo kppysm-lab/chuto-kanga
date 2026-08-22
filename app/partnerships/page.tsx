@@ -99,7 +99,7 @@ export default function PartnershipsPage() {
       <Container className="mt-24 max-w-5xl md:mt-32">
         <Reveal>
           <p className="max-w-lg text-sm leading-relaxed text-ink/70">
-            編集としての視点をそのままに、ブランド・ホテル・レストラン・イベントのための制作とプロモーションを行っています。
+            編集としての視点をそのままに、ブランド・ホテル・レストラン・イベントのための制作とプロモーションを行っています。表層的な訴求ではなく、その場所や体験が持つ本質的な価値を見つめること――それが、中東閑雅のタイアップコンテンツが持つ強みです。
           </p>
         </Reveal>
         <ul className="mt-10 divide-y divide-line border-t border-line">

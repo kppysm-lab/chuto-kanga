@@ -86,7 +86,9 @@ export default function PartnershipsPageEn() {
         <Reveal>
           <p className="max-w-lg text-sm leading-relaxed text-ink/70">
             Carrying our editorial perspective through into production and promotion for
-            brands, hotels, restaurants, and events.
+            brands, hotels, restaurants, and events. Not surface-level appeal, but a focus on
+            the essential value a place or experience holds — that is the strength CHŪTŌ KANGA
+            brings to sponsored content.
           </p>
         </Reveal>
         <ul className="mt-10 divide-y divide-line border-t border-line">
