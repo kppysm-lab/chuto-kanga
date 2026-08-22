@@ -4,8 +4,7 @@ backend:
   branch: main
   base_url: https://chuto-kanga.vercel.app
   auth_endpoint: api/auth
-
-publish_mode: editorial_workflow
+  
 
 media_folder: "public/images/articles"
 public_folder: "/images/articles"
