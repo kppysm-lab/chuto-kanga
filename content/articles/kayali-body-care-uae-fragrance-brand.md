@@ -1,5 +1,4 @@
 ---
-slug: kayali-body-care-uae-fragrance-brand
 title: KAYALIとは？ UAE発フレグランスブランドがボディケアへ広げる「香りのレイヤリング」
 titleEn: What Is KAYALI? The UAE Fragrance Brand Expands Layering Into Body Care
 dek: Dubaiで生まれたフレグランスブランドKAYALIが、初の本格的なボディ＆リップケアをグローバル展開した。ブランドの核にある「香りのレイヤリング」と、中東の香り文化を背景に、その次の一手を読み解く。
@@ -12,9 +11,10 @@ excerpt: >-
 category: fashion-beauty
 location: ドバイ、アラブ首長国連邦
 date: 2026-08-22
-author: 中東閑雅編集部
 heroImage: /images/articles/mona-kattan-kayali-yum-pistachio-social.jpg.webp
 heroImagePosition: top
+slug: kayali-body-care-uae-fragrance-brand
+author: 中東閑雅編集部
 featured: false
 published: true
 ---
@@ -30,8 +30,6 @@ https://www.instagram.com/p/DcTTkxjAN7e/?hl=en&img_index=1
 
 今回の新商品は、単なるカテゴリー拡張として見るよりも、KAYALIがこれまで大切にしてきた「香りを重ねる」という思想を、香水のボトルの外へ広げる動きとして見る。
 
-
-
 **KAYALIとは——Dubaiから生まれたフレグランスブランド**
 
 ![](/images/articles/screenshot-2026-02-10-at-3.25.34 pm.png.webp)
@@ -46,21 +44,19 @@ https://www.instagram.com/p/ChAZy_QPOqQ/
 
 以来、ブランドの顔として育て上げてきたのが妹のMonaである。
 
-ブランド名の「KAYALI」は、**アラビア語で「私の想像」**を意味する言葉に由来する。
+ブランド名の「KAYALI」は、*アラビア語で「私の想像」*を意味する言葉に由来する。
 
 その名前が示すように、KAYALIが最初から大切にしてきたのは、ひとつの完成された香りをそのまま纏うことだけではない。
 
 異なる香りを重ね、自分だけの組み合わせをつくること。
 
-KAYALIでは、この考え方を**「fragrance layering」**と呼んでいる。
+KAYALIでは、この考え方を*「fragrance layering」*と呼んでいる。
 
 ウード、ムスク、ローズ、アンバー。
 
 中東では、複数の香りを身体や衣服に重ねたり、バフールなどを使って空間そのものに香りをまとわせたりする文化が長く存在してきた。
 
 KAYALIは、その中東の香り文化を、現代のグローバルなフレグランス市場へ翻訳したブランドのひとつと言える。
-
-
 
 **Mona Kattanとは**
 
@@ -83,8 +79,6 @@ https://www.instagram.com/p/DGNkKbGpGIQ/
 2025年2月、KAYALIはHuda Beautyから独立し、Monaと投資会社General Atlanticが共同オーナーとなった、単独のフレグランス企業になった。Monaは引き続きCEOとしてブランドを率いている。
 
 自らの名前と世界観を持つグローバルなフレグランスブランドとして次の段階へ進んだ瞬間でもあった。
-
-
 
 **香水のその先へ——Yum Lip & Body Collection**
 
@@ -110,8 +104,6 @@ https://www.instagram.com/p/DcOWddpg0S3/
 
 UAE在住なら、[KAYALI公式サイト（UAE版）](https://www.instagram.com/p/DcQtIRGqvpE/)と[Sephora UAE公式サイトのKAYALIブランドページ](https://www.sephora.ae/en/brands/kayali)から購入できる。
 
-
-
 **中東の「香りを重ねる文化」**
 
 https://www.instagram.com/p/DV_Yu6BCva3/?img_index=1
@@ -130,8 +122,6 @@ KAYALIの「layering」という思想は、こうした中東の香り文化と
 
 今回のボディケア進出も、単に売る商品の種類を増やしたというより、「香りのある生活」をより広く提案する動きとして見ることができる。
 
-
-
 **デーツやザクロ——処方の中にも見える地域との接点**
 
 ![](/images/articles/chatgpt-image-2026年8月22日-20_14_03.png)
@@ -144,8 +134,6 @@ Dubaiから生まれたブランドが自らの世界観をボディケアへ広
 
 香りだけではなく、処方の中にも小さな「場所の記憶」が見える。
 
-
-
 **世界展開の今、そして日本では**
 
 ![](/images/articles/mona-kattan-kayali.jpg.webp)
@@ -157,8 +145,6 @@ Dubaiから生まれたブランドが自らの世界観をボディケアへ広
 一方、日本ではまだ公式な販売網がない。BUYMAなど海外通販の並行輸入や、フリマアプリでの取引を通じて手に入れているファンが中心で、「日本未上陸」の状態が続いている。それでも、香水好きの間ではSNSや個人ブログを通じて着実に知名度を上げてきたブランドでもある。
 
 今回のボディケア進出とグローバル展開の勢いを考えると、KAYALIが日本に正式上陸する日もそう遠くないかもしれない。
-
-
 
 **UAE発ブランドが世界へ持ち出したもの**
 
