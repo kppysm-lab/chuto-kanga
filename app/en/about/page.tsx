@@ -29,18 +29,17 @@ const sections: Section[] = [
   {
     title: "What Is CHŪTŌ KANGA",
     paragraphs: [
-      "Glossy hotel photography, towering skylines, claims of being the world's largest or the world's best — much of what's written about the Middle East today stops at consumer culture and material wealth. CHŪTŌ KANGA looks the other way.",
-      "Historical and cultural context. How people actually live and think. The philosophy behind architecture and art. Across hotels, dining, fashion, art, architecture, and events, we look at the contemporary Middle East through an editorial lens. What matters here isn't speed or scale, but what we choose to cover, and how we choose to tell it.",
+      "Glossy hotel photography, towering skylines, claims of being the world's largest or the world's best — much of what's written about the Middle East leans on consumption and scale. CHŪTŌ KANGA looks further: at historical and cultural context, how people actually live and think, the philosophy behind architecture and art. Across hotels, dining, fashion, art, architecture, and events, we look at the contemporary Middle East through an editorial lens. What matters here isn't speed or scale, but what we choose to cover, and how we choose to tell it.",
     ],
     pillars: [
       { label: "Information", body: "Practical knowledge, told alongside the thinking behind it." },
-      { label: "Lifestyle", body: "The refined daily life of people living in the Middle East." },
+      { label: "Lifestyle", body: "The daily life of people living in the Middle East." },
       { label: "Art", body: "A dialogue between contemporary art, craft, and Japanese aesthetics." },
     ],
   },
   {
     title: "Why A Japanese Perspective",
-    lead: "Japan and the Middle East are distant places, both geographically and culturally. And yet, laying their aesthetic sensibilities side by side reveals unexpected points of contact.",
+    lead: "Japan and the Middle East are distant places, geographically and culturally. Yet laying their aesthetic sensibilities side by side reveals unexpected points of contact.",
     points: [
       {
         label: "The Aesthetics of Space",
@@ -48,7 +47,7 @@ const sections: Section[] = [
       },
       {
         label: "The Value of Time",
-        body: "Just as wabi-sabi cherishes the traces time leaves behind, a carefully brewed cup of Arabian coffee and a centuries-old building still in use both carry the same reverence for time.",
+        body: "Just as wabi-sabi cherishes the traces time leaves behind, a carefully brewed cup of Arabian coffee and an old building still in use carry the same reverence for time.",
       },
       {
         label: "A Craftsman's Spirit",
@@ -56,27 +55,26 @@ const sections: Section[] = [
       },
       {
         label: "A Question of Essence",
-        body: "What remains once the surface splendor is stripped away? Wabi-sabi and Middle Eastern simplicity are, in the end, questions facing the same direction.",
+        body: "What remains once the surface splendor is stripped away? Wabi-sabi and Middle Eastern simplicity are questions facing the same direction.",
       },
     ],
-    closing:
-      "Part of why CHŪTŌ KANGA exists is to explore what becomes visible in the Middle East when seen through this Japanese cultural vantage point.",
+    closing: "Seeing the Middle East from this vantage point is one of the things CHŪTŌ KANGA holds onto.",
   },
   {
     title: "The Meaning Of Kanga",
-    lead: "Kanga (閑雅) is an existing Japanese word, describing a bearing or presence that is graceful and refined, or a stillness that carries quiet atmosphere and depth. Chūtō (中東) geographically refers to the UAE, Dubai, and the wider Middle East. But chū (中) also carries the sense of the mean — a state of balance — and tō (東) carries the wisdom of the East.",
+    lead: "Kanga (閑雅) describes a bearing that is graceful and refined, or a stillness that carries quiet atmosphere. In chūtō (中東), chū (中) carries the sense of the mean, and tō (東) carries the wisdom of the East. CHŪTŌ KANGA currently looks at the Middle East from the UAE and Dubai as a starting point — a view that stays open to Saudi Arabia, Qatar, Oman, and the wider region beyond.",
     glossary: [
       {
         char: "閑",
-        body: "Kan is not simple quietness. The character combines gate (門) with gap (間), originally meaning the space between two gates. From there it came to mean blank space, room to breathe, freedom from constraint — the same idea behind the Japanese sense of ma, the emptiness within wabi-sabi, the Zen notion of emptiness, the deliberate blankness of a garden's design. It echoes, too, in the vastness of the desert and in the spatial logic of Middle Eastern architecture.",
+        body: "The character depicts a gate closed with wood. From there it came to mean stillness, calm, room to breathe — the same sense behind the Japanese ma, the emptiness within wabi-sabi, the Zen notion of emptiness. It echoes, too, in the openness of the desert and the way Middle Eastern architecture handles space.",
       },
       {
         char: "雅",
-        body: "Ga comes from a character originally meaning an elegant bird. It doesn't describe opulence or spectacle, but aesthetic judgment shaped by knowledge and experience — a quality polished over time. It's the same word found in gagaku, Japan's court music, and gagō, an artist's honorific name: the vocabulary of the highest refinement.",
+        body: "The character originally named a bird. It later came to mean correctness, and then elegance and refinement — not opulence, but aesthetic judgment shaped by knowledge and experience. It's the same word found in gagaku, Japan's court music, and gagō, an artist's honorific name.",
       },
     ],
     closing:
-      "To search for the quiet, refined beauty of the Middle East. To discover and tell of the vast space (kan) of the region and the refined beauty (ga) hidden within it. That is the attitude this name points to.",
+      "To find the vastness of the Middle East (kan) and the refinement hidden within it (ga), and to tell of it. That is the attitude this name holds.",
   },
   {
     title: "Editorial Approach",
@@ -88,11 +86,11 @@ const sections: Section[] = [
       },
       {
         label: "Respect space and silence",
-        body: "In an age of information overload, present the beauty of saying nothing.",
+        body: "In an age of information overload, value the beauty of saying nothing.",
       },
       {
-        label: "Bridge cultures",
-        body: "Discover points of contact between Japan and the Middle East, and foster mutual understanding.",
+        label: "Connect across cultures",
+        body: "Find points of contact between Japan and the Middle East, and deepen mutual understanding.",
       },
     ],
   },
@@ -166,10 +164,10 @@ export default function AboutPageEn() {
           </Reveal>
           <Reveal delay={200}>
             <p className="mt-8 text-[17px] leading-[1.9] text-ink/80">
-              CHŪTŌ KANGA reads Middle Eastern culture, luxury, and lifestyle through a Japanese
-              lens. Behind what most coverage frames as the splendor of Dubai or the wealth of
-              the Middle East lies a quiet, deeper aesthetic that has barely been told. CHŪTŌ
-              KANGA surfaces that overlooked beauty, filtered through a Japanese sensibility.
+              CHŪTŌ KANGA reads Middle Eastern culture and lifestyle through a Japanese lens.
+              Behind what much coverage frames as the splendor of Dubai lies a quiet aesthetic
+              that has barely been told. CHŪTŌ KANGA surfaces that overlooked beauty through a
+              Japanese sensibility.
             </p>
           </Reveal>
         </Container>
@@ -189,9 +187,14 @@ export default function AboutPageEn() {
 
         <div className="mt-14 border-t border-line pt-8">
           <p className="text-[17px] leading-[1.9] text-ink/80">
-            Beyond our editorial work, CHŪTŌ KANGA also produces articles, photography, video,
-            and social content for hotels, restaurants, brands, events, and cultural
-            institutions, and supports promotion aimed at the Japanese market.
+            CHŪTŌ KANGA was founded by a Japanese person living in Dubai — daily life there is
+            what sharpens the view of what&apos;s ordinary here.
+          </p>
+          <p className="mt-4 text-[17px] leading-[1.9] text-ink/80">
+            This perspective doesn&apos;t stop at the page. CHŪTŌ KANGA brings the same lens to
+            storytelling for hotels, restaurants, brands, events, and cultural institutions,
+            through articles, photography, video, and social content, and through promotion
+            aimed at the Japanese market.
           </p>
           <div className="mt-8 flex flex-wrap gap-10">
             <EditorialLink href="/en/partnerships">Explore Partnerships</EditorialLink>
