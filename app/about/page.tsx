@@ -103,13 +103,34 @@ const sections: Section[] = [
   },
 ];
 
+// Breaks Japanese body text onto a new line after every 。, so dense
+// paragraphs read as short, scannable lines instead of one unbroken block.
+function Sentences({ text }: { text: string }) {
+  const sentences = text.split("。").filter(Boolean);
+  return (
+    <>
+      {sentences.map((sentence, i) => (
+        <span key={i}>
+          {sentence}
+          {"。"}
+          {i < sentences.length - 1 ? <br /> : null}
+        </span>
+      ))}
+    </>
+  );
+}
+
 function SectionBody({ s }: { s: Section }) {
   return (
     <>
-      {s.lead ? <p className="mt-4 text-[17px] leading-[1.9] text-ink/80">{s.lead}</p> : null}
+      {s.lead ? (
+        <p className="mt-4 text-[17px] leading-[1.9] text-ink/80">
+          <Sentences text={s.lead} />
+        </p>
+      ) : null}
       {s.paragraphs?.map((p, i) => (
         <p key={i} className="mt-4 text-[17px] leading-[1.9] text-ink/80">
-          {p}
+          <Sentences text={p} />
         </p>
       ))}
       {s.glossary ? (
@@ -119,7 +140,9 @@ function SectionBody({ s }: { s: Section }) {
               <span className="shrink-0 font-serif text-5xl leading-none text-vermilion md:text-6xl">
                 {g.char}
               </span>
-              <p className="mt-1 text-[15px] leading-[1.8] text-ink/70">{g.body}</p>
+              <p className="mt-1 text-[15px] leading-[1.8] text-ink/70">
+                <Sentences text={g.body} />
+              </p>
             </div>
           ))}
         </div>
@@ -133,7 +156,9 @@ function SectionBody({ s }: { s: Section }) {
               </span>
               <div>
                 <p className="font-serif text-base text-ink md:text-lg">{p.label}</p>
-                <p className="mt-1.5 text-[15px] leading-[1.8] text-ink/70">{p.body}</p>
+                <p className="mt-1.5 text-[15px] leading-[1.8] text-ink/70">
+                  <Sentences text={p.body} />
+                </p>
               </div>
             </div>
           ))}
@@ -150,7 +175,9 @@ function SectionBody({ s }: { s: Section }) {
         </div>
       ) : null}
       {s.closing ? (
-        <p className="mt-6 text-[17px] leading-[1.9] text-ink/80">{s.closing}</p>
+        <p className="mt-6 text-[17px] leading-[1.9] text-ink/80">
+          <Sentences text={s.closing} />
+        </p>
       ) : null}
     </>
   );
@@ -176,7 +203,7 @@ export default function AboutPage() {
           </Reveal>
           <Reveal delay={200}>
             <p className="mt-8 text-[17px] leading-[1.9] text-ink/80">
-              中東閑雅（CHŪTŌ KANGA）は、日本の視点から中東の文化、ラグジュアリー、ライフスタイルを読み解くメディアです。多くのメディアが語る「ドバイの豪華さ」「中東の富」の裏側には、まだほとんど語られていない、静かで深い美学があります。中東閑雅は、この見落とされてきた美を、日本の感性というフィルターを通して発信しています。
+              <Sentences text="中東閑雅（CHŪTŌ KANGA）は、日本の視点から中東の文化、ラグジュアリー、ライフスタイルを読み解くメディアです。多くのメディアが語る「ドバイの豪華さ」「中東の富」の裏側には、まだほとんど語られていない、静かで深い美学があります。中東閑雅は、この見落とされてきた美を、日本の感性というフィルターを通して発信しています。" />
             </p>
           </Reveal>
         </Container>
@@ -197,7 +224,7 @@ export default function AboutPage() {
 
         <div className="mt-14 border-t border-line pt-8">
           <p className="text-[17px] leading-[1.9] text-ink/80">
-            中東閑雅では編集活動に加え、ホテル、レストラン、ブランド、イベント、文化施設などを対象に、記事・写真・映像・SNSコンテンツの制作、日本市場向けのプロモーションを行っています。
+            <Sentences text="中東閑雅では編集活動に加え、ホテル、レストラン、ブランド、イベント、文化施設などを対象に、記事・写真・映像・SNSコンテンツの制作、日本市場向けのプロモーションを行っています。" />
           </p>
           <div className="mt-8 flex flex-wrap gap-10">
             <EditorialLink href="/partnerships">Explore Partnerships</EditorialLink>
