@@ -13,12 +13,15 @@ export const metadata: Metadata = {
 };
 
 type Point = { label: string; body: string };
+type GlossaryEntry = { char: string; body: string };
 
 type Section = {
   title: string;
   lead?: string;
   paragraphs?: string[];
   points?: Point[];
+  pillars?: Point[];
+  glossary?: GlossaryEntry[];
   closing?: string;
 };
 
@@ -26,8 +29,13 @@ const sections: Section[] = [
   {
     title: "What Is CHŪTŌ KANGA",
     paragraphs: [
-      "Glossy hotel photography, towering skylines, claims of being the world's largest or the world's best — much of what's written about the Middle East today stops at consumer culture and material wealth. CHŪTŌ KANGA looks the other way: at historical and cultural context, at how people actually live and think, at the philosophy behind architecture and art. Across hotels, dining, fashion, art, architecture, and events, we look at the contemporary Middle East through an editorial lens. What matters here isn't speed or scale, but what we choose to cover, and how we choose to tell it.",
-      "Our coverage rests on three pillars: information — practical knowledge told alongside the thinking behind it; lifestyle — the refined daily life of people living in the Middle East; and art — a dialogue between contemporary art, traditional craft, and Japanese aesthetics.",
+      "Glossy hotel photography, towering skylines, claims of being the world's largest or the world's best — much of what's written about the Middle East today stops at consumer culture and material wealth. CHŪTŌ KANGA looks the other way.",
+      "Historical and cultural context. How people actually live and think. The philosophy behind architecture and art. Across hotels, dining, fashion, art, architecture, and events, we look at the contemporary Middle East through an editorial lens. What matters here isn't speed or scale, but what we choose to cover, and how we choose to tell it.",
+    ],
+    pillars: [
+      { label: "Information", body: "Practical knowledge, told alongside the thinking behind it." },
+      { label: "Lifestyle", body: "The refined daily life of people living in the Middle East." },
+      { label: "Art", body: "A dialogue between contemporary art, craft, and Japanese aesthetics." },
     ],
   },
   {
@@ -56,12 +64,19 @@ const sections: Section[] = [
   },
   {
     title: "The Meaning Of Kanga",
-    paragraphs: [
-      "Chūtō (中東) geographically refers to the UAE, Dubai, and the wider Middle East. But chū (中) also carries the sense of the mean — a state of balance — and tō (東) carries the wisdom of the East.",
-      "Kan (閑) is not simple quietness. The character combines gate (門) with gap (間), originally meaning the space between two gates. From there it came to mean blank space, room to breathe, freedom from constraint — the same idea behind the Japanese sense of ma, the emptiness within wabi-sabi, the Zen notion of emptiness, the deliberate blankness of a garden's design. It echoes, too, in the vastness of the desert and in the spatial logic of Middle Eastern architecture.",
-      "Ga (雅) comes from a character originally meaning an elegant bird. It doesn't describe opulence or spectacle, but aesthetic judgment shaped by knowledge and experience — a quality polished over time. It's the same word found in gagaku, Japan's court music, and gagō, an artist's honorific name: the vocabulary of the highest refinement.",
-      "To search for the quiet, refined beauty of the Middle East. To discover and tell of the vast space (kan) of the region and the refined beauty (ga) hidden within it. That is the attitude this name points to.",
+    lead: "Chūtō (中東) geographically refers to the UAE, Dubai, and the wider Middle East. But chū (中) also carries the sense of the mean — a state of balance — and tō (東) carries the wisdom of the East.",
+    glossary: [
+      {
+        char: "閑",
+        body: "Kan is not simple quietness. The character combines gate (門) with gap (間), originally meaning the space between two gates. From there it came to mean blank space, room to breathe, freedom from constraint — the same idea behind the Japanese sense of ma, the emptiness within wabi-sabi, the Zen notion of emptiness, the deliberate blankness of a garden's design. It echoes, too, in the vastness of the desert and in the spatial logic of Middle Eastern architecture.",
+      },
+      {
+        char: "雅",
+        body: "Ga comes from a character originally meaning an elegant bird. It doesn't describe opulence or spectacle, but aesthetic judgment shaped by knowledge and experience — a quality polished over time. It's the same word found in gagaku, Japan's court music, and gagō, an artist's honorific name: the vocabulary of the highest refinement.",
+      },
     ],
+    closing:
+      "To search for the quiet, refined beauty of the Middle East. To discover and tell of the vast space (kan) of the region and the refined beauty (ga) hidden within it. That is the attitude this name points to.",
   },
   {
     title: "Editorial Approach",
@@ -92,6 +107,18 @@ function SectionBody({ s }: { s: Section }) {
           {p}
         </p>
       ))}
+      {s.glossary ? (
+        <div className="mt-8 space-y-8">
+          {s.glossary.map((g) => (
+            <div key={g.char} className="flex items-start gap-6">
+              <span className="shrink-0 font-serif text-5xl leading-none text-vermilion md:text-6xl">
+                {g.char}
+              </span>
+              <p className="mt-1 text-[15px] leading-[1.8] text-ink/70">{g.body}</p>
+            </div>
+          ))}
+        </div>
+      ) : null}
       {s.points ? (
         <div className="mt-6 space-y-6">
           {s.points.map((p, i) => (
@@ -103,6 +130,16 @@ function SectionBody({ s }: { s: Section }) {
                 <p className="font-serif-en text-base text-ink md:text-lg">{p.label}</p>
                 <p className="mt-1.5 text-[15px] leading-[1.8] text-ink/70">{p.body}</p>
               </div>
+            </div>
+          ))}
+        </div>
+      ) : null}
+      {s.pillars ? (
+        <div className="mt-6 grid grid-cols-1 gap-6 border-t border-line pt-6 sm:grid-cols-3">
+          {s.pillars.map((p) => (
+            <div key={p.label}>
+              <p className="font-serif-en text-base text-ink">{p.label}</p>
+              <p className="mt-1.5 text-[14px] leading-[1.7] text-ink/60">{p.body}</p>
             </div>
           ))}
         </div>

@@ -13,6 +13,7 @@ export const metadata: Metadata = {
 };
 
 type Point = { label: string; body: string };
+type GlossaryEntry = { char: string; body: string };
 
 type Section = {
   title: string;
@@ -20,6 +21,8 @@ type Section = {
   lead?: string;
   paragraphs?: string[];
   points?: Point[];
+  pillars?: Point[];
+  glossary?: GlossaryEntry[];
   closing?: string;
 };
 
@@ -28,8 +31,13 @@ const sections: Section[] = [
     title: "中東閑雅とは",
     en: "What Is CHŪTŌ KANGA",
     paragraphs: [
-      "高級ホテルの写真、超高層ビル、「世界最大」「世界最高」という比較級――いまの中東の情報の多くは、消費文化と物質的な豊かさを強調するところで止まっています。中東閑雅が見つめているのは、その対極です。歴史・文化的な背景、地元の人々の生活と思考、建築やアートの背後にある哲学。ホテル、ダイニング、ファッション、アート、建築、イベントといった領域を通じて、いまの中東を編集の視点で見つめる。速報性や規模の大きさではなく、何をどう選び、どう語るかに価値を置いています。",
-      "扱っているのは、情報（背景にある思想とともに紹介する実用情報）、ライフスタイル（中東で暮らす人々の洗練された日常）、芸術（現代アート、伝統工芸と日本の美学との対話）という三つの柱です。",
+      "高級ホテルの写真、超高層ビル、「世界最大」「世界最高」という比較級――いまの中東の情報の多くは、消費文化と物質的な豊かさを強調するところで止まっています。中東閑雅が見つめているのは、その対極です。",
+      "歴史・文化的な背景、地元の人々の生活と思考、建築やアートの背後にある哲学。ホテル、ダイニング、ファッション、アート、建築、イベントといった領域を通じて、いまの中東を編集の視点で見つめる。速報性や規模の大きさではなく、何をどう選び、どう語るかに価値を置いています。",
+    ],
+    pillars: [
+      { label: "情報", body: "背景にある思想とともに紹介する実用情報。" },
+      { label: "ライフスタイル", body: "中東で暮らす人々の洗練された日常。" },
+      { label: "芸術", body: "現代アート、伝統工芸と日本の美学との対話。" },
     ],
   },
   {
@@ -60,12 +68,19 @@ const sections: Section[] = [
   {
     title: "閑雅という言葉",
     en: "The Meaning Of Kanga",
-    paragraphs: [
-      "「中東」は地理的にはUAE・ドバイを中心とした地域を指しますが、同時に「中」は中庸（バランスの取れた状態）を、「東」は東方の叡智を含んでいます。",
-      "「閑」は、単なる静けさではありません。字は「門」と「間」からなり、もとは門のあいだの隙間を意味しました。そこから「余白」「空間」「心の余裕」「束縛からの解放」へと転じています。日本美学でいう「間」や余白、茶道のわび・さび、禅の「空」、庭園設計にみられる余白――そのすべてに通じる概念であり、砂漠の広大さや、中東建築の空間設計にも重なります。",
-      "「雅」は、優雅な鳥を意味する字から生まれました。単なる豪華さや派手さではなく、知識と経験に基づいた美的判断、時間をかけて磨かれた品質。日本の「雅楽」「雅号」に通じる、最高級の美学の言葉です。",
-      "中東（という地）の、静かで洗練された美を探求する。中東の広大な空間（閑）と、その中に隠された洗練された美（雅）を発見し、伝えること。それが、この名前が示す態度です。",
+    lead: "「中東」は地理的にはUAE・ドバイを中心とした地域を指しますが、同時に「中」は中庸（バランスの取れた状態）を、「東」は東方の叡智を含んでいます。",
+    glossary: [
+      {
+        char: "閑",
+        body: "単なる静けさではありません。字は「門」と「間」からなり、もとは門のあいだの隙間を意味しました。そこから「余白」「空間」「心の余裕」「束縛からの解放」へと転じています。日本美学でいう「間」や余白、茶道のわび・さび、禅の「空」、庭園設計にみられる余白――そのすべてに通じる概念であり、砂漠の広大さや、中東建築の空間設計にも重なります。",
+      },
+      {
+        char: "雅",
+        body: "優雅な鳥を意味する字から生まれました。単なる豪華さや派手さではなく、知識と経験に基づいた美的判断、時間をかけて磨かれた品質。日本の「雅楽」「雅号」に通じる、最高級の美学の言葉です。",
+      },
     ],
+    closing:
+      "中東（という地）の、静かで洗練された美を探求する。中東の広大な空間（閑）と、その中に隠された洗練された美（雅）を発見し、伝えること。それが、この名前が示す態度です。",
   },
   {
     title: "編集の姿勢",
@@ -97,6 +112,18 @@ function SectionBody({ s }: { s: Section }) {
           {p}
         </p>
       ))}
+      {s.glossary ? (
+        <div className="mt-8 space-y-8">
+          {s.glossary.map((g) => (
+            <div key={g.char} className="flex items-start gap-6">
+              <span className="shrink-0 font-serif text-5xl leading-none text-vermilion md:text-6xl">
+                {g.char}
+              </span>
+              <p className="mt-1 text-[15px] leading-[1.8] text-ink/70">{g.body}</p>
+            </div>
+          ))}
+        </div>
+      ) : null}
       {s.points ? (
         <div className="mt-6 space-y-6">
           {s.points.map((p, i) => (
@@ -108,6 +135,16 @@ function SectionBody({ s }: { s: Section }) {
                 <p className="font-serif text-base text-ink md:text-lg">{p.label}</p>
                 <p className="mt-1.5 text-[15px] leading-[1.8] text-ink/70">{p.body}</p>
               </div>
+            </div>
+          ))}
+        </div>
+      ) : null}
+      {s.pillars ? (
+        <div className="mt-6 grid grid-cols-1 gap-6 border-t border-line pt-6 sm:grid-cols-3">
+          {s.pillars.map((p) => (
+            <div key={p.label}>
+              <p className="font-serif text-base text-ink">{p.label}</p>
+              <p className="mt-1.5 text-[14px] leading-[1.7] text-ink/60">{p.body}</p>
             </div>
           ))}
         </div>
