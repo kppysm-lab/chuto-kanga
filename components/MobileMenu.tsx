@@ -21,7 +21,7 @@ export default function MobileMenu({
   if (!open) return null;
 
   return (
-    <div className="fixed inset-0 z-[140] flex flex-col bg-paper md:hidden">
+    <div className="fixed inset-0 z-[140] flex flex-col bg-paper xl:hidden">
       <div className="flex h-20 shrink-0 items-center justify-between px-6">
         <span className="font-serif text-lg tracking-[0.15em] text-ink">中東閑雅</span>
         <button

@@ -30,7 +30,7 @@ export default function Header() {
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-7 md:flex">
+        <nav className="hidden items-center gap-6 xl:flex">
           {primaryNav.map((link) => {
             const href = localizeHref(pathname, link.href);
             const active = pathname === href || pathname.startsWith(href + "/");
@@ -66,7 +66,7 @@ export default function Header() {
           type="button"
           aria-label="メニューを開く"
           onClick={() => setMenuOpen(true)}
-          className="flex h-8 w-8 flex-col items-center justify-center gap-1.5 md:hidden"
+          className="flex h-8 w-8 flex-col items-center justify-center gap-1.5 xl:hidden"
         >
           <span className="block h-px w-6 bg-ink" />
           <span className="block h-px w-6 bg-ink" />
