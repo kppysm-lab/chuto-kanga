@@ -166,12 +166,10 @@ export default function AboutPageEn() {
           </Reveal>
           <Reveal delay={200}>
             <p className="mt-8 text-[17px] leading-[1.9] text-ink/80">
-              CHŪTŌ KANGA is an independent media platform that reads Middle Eastern culture,
-              luxury, and lifestyle through a Japanese lens. It is not a news site, a travel
-              guide, or a luxury blog. Behind what most coverage frames as the splendor of Dubai
-              or the wealth of the Middle East lies a quiet, deeper aesthetic that has barely
-              been told. CHŪTŌ KANGA exists to surface that overlooked beauty, filtered through a
-              Japanese sensibility.
+              CHŪTŌ KANGA reads Middle Eastern culture, luxury, and lifestyle through a Japanese
+              lens. Behind what most coverage frames as the splendor of Dubai or the wealth of
+              the Middle East lies a quiet, deeper aesthetic that has barely been told. CHŪTŌ
+              KANGA surfaces that overlooked beauty, filtered through a Japanese sensibility.
             </p>
           </Reveal>
         </Container>
