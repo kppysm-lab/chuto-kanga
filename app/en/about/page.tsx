@@ -64,7 +64,7 @@ const sections: Section[] = [
   },
   {
     title: "The Meaning Of Kanga",
-    lead: "Chūtō (中東) geographically refers to the UAE, Dubai, and the wider Middle East. But chū (中) also carries the sense of the mean — a state of balance — and tō (東) carries the wisdom of the East.",
+    lead: "Kanga (閑雅) is an existing Japanese word, describing a bearing or presence that is graceful and refined, or a stillness that carries quiet atmosphere and depth. Chūtō (中東) geographically refers to the UAE, Dubai, and the wider Middle East. But chū (中) also carries the sense of the mean — a state of balance — and tō (東) carries the wisdom of the East.",
     glossary: [
       {
         char: "閑",
