@@ -8,5 +8,41 @@
   </head>
   <body>
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    <script>
+      // Auto-translates an article into English on save, if no English
+      // fields have been written yet. Lets editors write Japanese only and
+      // get a real English version without a separate translation step.
+      CMS.registerEventListener({
+        name: "preSave",
+        handler: async ({ entry }) => {
+          const data = entry.get("data").toJS();
+          if (!data.title || !data.body || data.titleEn) return data;
+
+          try {
+            const res = await fetch("/api/translate", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({
+                title: data.title,
+                dek: data.dek,
+                excerpt: data.excerpt,
+                body: data.body,
+              }),
+            });
+            if (!res.ok) return data;
+            const translated = await res.json();
+            return {
+              ...data,
+              titleEn: translated.titleEn,
+              dekEn: translated.dekEn,
+              excerptEn: translated.excerptEn,
+              bodyEn: translated.bodyEn,
+            };
+          } catch {
+            return data;
+          }
+        },
+      });
+    </script>
   </body>
 </html>

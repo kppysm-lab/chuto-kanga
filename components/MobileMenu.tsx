@@ -4,7 +4,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { primaryNav } from "@/lib/nav";
 import { getLangSwitch, localizeHref } from "@/lib/lang";
-import GoogleTranslate from "./GoogleTranslate";
 
 export default function MobileMenu({
   open,
@@ -67,7 +66,6 @@ export default function MobileMenu({
         <Link href={langSwitch.href} onClick={onClose} className="hover:text-vermilion">
           {langSwitch.label}
         </Link>
-        <GoogleTranslate />
       </div>
     </div>
   );
