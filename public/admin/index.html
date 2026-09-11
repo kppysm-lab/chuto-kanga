@@ -15,29 +15,32 @@
       CMS.registerEventListener({
         name: "preSave",
         handler: async ({ entry }) => {
-          const data = entry.get("data").toJS();
-          if (!data.title || !data.body || data.titleEn) return data;
+          // `entry.get("data")` is an Immutable.js Map, and Decap expects
+          // this handler to return one too (it calls .getIn() on whatever
+          // comes back) — returning a plain object here crashes the save.
+          const data = entry.get("data");
+          const plain = data.toJS();
+          if (!plain.title || !plain.body || plain.titleEn) return data;
 
           try {
             const res = await fetch("/api/translate", {
               method: "POST",
               headers: { "Content-Type": "application/json" },
               body: JSON.stringify({
-                title: data.title,
-                dek: data.dek,
-                excerpt: data.excerpt,
-                body: data.body,
+                title: plain.title,
+                dek: plain.dek,
+                excerpt: plain.excerpt,
+                body: plain.body,
               }),
             });
             if (!res.ok) return data;
             const translated = await res.json();
-            return {
-              ...data,
+            return data.merge({
               titleEn: translated.titleEn,
               dekEn: translated.dekEn,
               excerptEn: translated.excerptEn,
               bodyEn: translated.bodyEn,
-            };
+            });
           } catch {
             return data;
           }
