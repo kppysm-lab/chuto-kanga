@@ -49,6 +49,8 @@ published: true
 
 **Saadiyat Cultural Districtそのものなのである。**
 
+
+
 **世界的な美術館の「隣」が、住宅地になる**
 
 ![](/images/articles/saadiyat-cultural-district-hero.jpg)
@@ -110,9 +112,7 @@ Sei Saadiyatで本当に興味深いのは、住宅の数よりも、この変�
 食べられること。
 買い物ができること。
 子どもが遊べること。
-人と偶然出会えること。
-
-が必要になる。
+人と偶然出会えること。が必要になる。
 
 Sei Saadiyatには住宅だけでなく、レストランやカフェ、小売店、図書スペース、共同で仕事ができる場所、映像を楽しめる部屋、子ども向けの空間などが計画されている。
 
@@ -200,7 +200,7 @@ https://www.instagram.com/p/DT-PpTIjEfq/
 
 **美術館の価値は、建物の中だけにない**
 
-Louvre Abu Dhabiの価値を考えるとき、**私たちはまず、そこに収蔵された作品や開催される展覧会を思い浮かべる。**
+Louvre Abu Dhabiの価値を考えるとき、私たちはまず、そこに収蔵された作品や開催される展覧会を思い浮かべる。
 
 https://www.instagram.com/p/DWOGHlwFMBy/
 
