@@ -2,21 +2,23 @@
 slug: sei-saadiyat-cultural-district
 title: Louvre Abu Dhabiの隣に住む。Saadiyatが「美術館の島」から「暮らす文化地区」へ
 titleEn: "Living Next to the Louvre: Saadiyat Becomes a Cultural Neighbourhood"
-dek: >-
-  世界的な美術館が集まるSaadiyat Cultural Districtに、新しい住宅「Sei
-  Saadiyat」が誕生する。文化を"見に行く"場所から、文化のそばで"暮らす"街へ――Abu
-  Dhabiの次の都市像を考える。
-excerpt: |-
-  Louvre Abu Dhabiをはじめ、世界的な文化施設が集まるSaadiyat Cultural Districtに、新たな住宅プロジェクト「Sei Saadiyat」が登場する。
+dek: 世界的な美術館が集まるSaadiyat Cultural Districtに、新しい住宅「Sei
+  Saadiyat」が誕生する。文化を"見に行く"場所から、文化のそばで"暮らす"街へ――Abu Dhabiの次の都市像を考える。
+excerpt: >-
+  Louvre Abu Dhabiをはじめ、世界的な文化施設が集まるSaadiyat Cultural Districtに、新たな住宅プロジェクト「Sei
+  Saadiyat」が登場する。
+
   美術館を訪れるための島から、文化を日常の風景として暮らす街へ。日本語の「静けさ」に着想を得たという"Sei"の思想や、日本の上野との違いから、Abu Dhabiが描く文化地区の次の姿を読み解く。
 category: architecture-travel
 location: アブダビ、アラブ首長国連邦
 date: 2026-09-11
 author: 中東閑雅編集部
-heroImage: ""
+heroImage: /images/articles/exterior-sei-saadiyat-in-saadiyat-cultural-district-by-aldar-royal-lounge-properties-5-1024x576.jpg.webp
 published: false
 ---
-美術館は、普通なら「出かける場所」だ。
+**美術館は、普通なら「出かける場所」だ。**
+
+![](/images/articles/images-7.jpeg)
 
 週末に展覧会を見て、カフェへ寄り、家へ帰る。
 
@@ -30,6 +32,8 @@ published: false
 
 2026年9月7日、Abu DhabiのデベロッパーAldarは、Saadiyat Cultural Districtに新しい住宅プロジェクト**「Sei Saadiyat」**を発表した。
 
+![](/images/articles/images-8.jpeg)
+
 第1期は2棟・265戸。最終的には6棟、778戸の住宅が計画されている。
 
 一見すれば、Abu Dhabiで相次ぐ高級住宅開発の一つにも見える。
@@ -40,7 +44,11 @@ published: false
 
 **Saadiyat Cultural Districtそのものなのである。**
 
+
+
 **世界的な美術館の「隣」が、住宅地になる**
+
+![](/images/articles/saadiyat-cultural-district-hero.jpg)
 
 Saadiyat Cultural DistrictにはLouvre Abu Dhabiがあり、Zayed National Museum、Natural History Museum Abu Dhabi、teamLab Phenomena Abu Dhabiなど、Abu Dhabiを代表する文化施設が集まっている。
 
@@ -56,15 +64,15 @@ Saadiyat Cultural DistrictにはLouvre Abu Dhabiがあり、Zayed National Museu
 
 が現れる。
 
-つまりSaadiyatは、
-
-**文化を訪れる場所から、文化の中で暮らす街へ**
-
-変わり始めている。
+つまりSaadiyatは、**文化を訪れる場所から、文化の中で暮らす街へ**変わり始めている。
 
 Sei Saadiyatで本当に興味深いのは、住宅の数よりも、この変化なのだと思う。
 
+
+
 **美術館の近くに住むと、文化との距離は変わるのか**
+
+![](/images/articles/zz0xmgyxzwy0zwfhotuxmwyxymuwndkynzkymwy5nziymw-.jpeg)
 
 美術館の隣に住んだからといって、毎日展覧会を見るわけではない。
 
@@ -82,11 +90,13 @@ Sei Saadiyatで本当に興味深いのは、住宅の数よりも、この変�
 
 ここで問われているのは、
 
-**文化施設があることで、その周囲の暮らしまで変わるのか**
+**文化施設があることで、その周囲の暮らしまで変わるのか**。
 
-ということだ。
+
 
 **住宅だけでは「街」にならない**
+
+![](/images/articles/39ea811e88ef-sei-saadiyat1.jpg)
 
 もちろん、文化地区に住宅を建てれば、それだけで街が完成するわけではない。
 
@@ -107,11 +117,13 @@ Sei Saadiyatには住宅だけでなく、レストランやカフェ、小売�
 
 つまりSaadiyatは、世界的な文化施設を建てる段階から、
 
-**その建築の間で、人がどう暮らすのかを設計する段階**
+**その建築の間で、人がどう暮らすのかを設計する段階**へ入りつつある。
 
-へ入りつつある。
+
 
 **「Sei」という名前は、日本語の"静けさ"から**
+
+![](/images/articles/lifestyle-sei-saadiyat-in-saadiyat-cultural-district-by-aldar-royal-lounge-properties-1024x576.jpg)
 
 日本人にとって興味深いのが、**Seiという名前**だ。
 
@@ -125,19 +137,21 @@ Aldarは「Sei」を、日本語の**静けさや穏やかさ**に着想を得�
 
 もちろん、「禅」という言葉を取り入れただけで、日本的な空間になるわけではない。
 
+![](/images/articles/exterior-sei-saadiyat-in-saadiyat-cultural-district-by-aldar-royal-lounge-properties-2-1024x576.jpg)
+
 世界の高級住宅やホテルでは、日本の「静けさ」や「禅」が、心身の安らぎを象徴するイメージとして引用されることも多い。
 
 それでも興味深いのは、世界的な美術館や大胆な建築が集まるSaadiyat Cultural Districtで、新しい住まいが求めている価値が、
 
-豪華さや大きさだけではなく、
+豪華さや大きさだけではなく、**「静けさ」**だということだ。
 
-**「静けさ」**
 
-だということだ。
 
 **外では文化に触れ、家では静かになる**
 
 Saadiyat Cultural Districtは、視覚的に非常に強い場所である。
+
+https://www.instagram.com/p/DT-PpTIjEfq/
 
 巨大な美術館。
 
@@ -161,25 +175,7 @@ Saadiyat Cultural Districtは、視覚的に非常に強い場所である。
 
 それがSei Saadiyatの考える豊かさなのかもしれない。
 
-**上野とSaadiyatは、似ているようで違う**
 
-日本で比較するなら、東京の上野が分かりやすい。
-
-東京国立博物館、国立西洋美術館、東京都美術館、国立科学博物館、東京藝術大学などが集まる一方、周辺には駅も、住宅も、商店もある。
-
-上野では、既存の街の中に文化施設が長い時間をかけて重なってきた。
-
-Saadiyatは逆だ。
-
-まず世界的な美術館や文化施設を計画し、その周囲に日常生活をつくろうとしている。
-
-これは湾岸地域の新しい都市開発だからこそ可能なことでもある。
-
-だからSaadiyatの成功は、美術館の数だけでは測れない。
-
-**その間に、本当の日常が生まれるかどうか。**
-
-そこが重要になる。
 
 **文化のそばに住めるのは、誰なのか**
 
@@ -203,9 +199,13 @@ Saadiyatは逆だ。
 
 これは、世界各地の美術館が集まる地区や、文化・創造産業を軸にした街づくりでも繰り返し問われてきたテーマだ。
 
+
+
 **美術館の価値は、建物の中だけにない**
 
 Louvre Abu Dhabiの価値を考えるとき、**私たちはまず、そこに収蔵された作品や開催される展覧会を思い浮かべる。**
+
+https://www.instagram.com/p/DWOGHlwFMBy/
 
 けれど美術館が街に与える影響は、その建物の中だけには収まらない。
 
