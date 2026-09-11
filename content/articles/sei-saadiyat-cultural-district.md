@@ -35,7 +35,7 @@ published: true
 
 それとも、いつの間にか日常の風景になるのだろうか。
 
-2026年9月7日、Abu DhabiのデベロッパーAldarは、Saadiyat Cultural Districtに新しい住宅プロジェクト**「Sei Saadiyat」**を発表した。
+2026年9月7日、Abu DhabiのデベロッパーAldarは、Saadiyat Cultural Districtに新しい住宅プロジェクト**Sei Saadiyat**を発表した。
 
 ![](/images/articles/images-8.jpeg)
 
@@ -49,15 +49,13 @@ published: true
 
 **Saadiyat Cultural Districtそのものなのである。**
 
-
-
 **世界的な美術館の「隣」が、住宅地になる**
 
 ![](/images/articles/saadiyat-cultural-district-hero.jpg)
 
 Saadiyat Cultural DistrictにはLouvre Abu Dhabiがあり、Zayed National Museum、Natural History Museum Abu Dhabi、teamLab Phenomena Abu Dhabiなど、Abu Dhabiを代表する文化施設が集まっている。
 
-これまでSaadiyatは、世界的な美術館や建築を**「見に行く場所」**として語られることが多かった。
+これまでSaadiyatは、世界的な美術館や建築を**見に行く場所**として語られることが多かった。
 
 だが住宅が増えれば、そこには美術館を訪れる人だけでなく、
 
@@ -120,9 +118,7 @@ Sei Saadiyatには住宅だけでなく、レストランやカフェ、小売�
 
 建物の間には庭園や歩行空間、アート、静かに過ごすための場所も設けられる。
 
-つまりSaadiyatは、世界的な文化施設を建てる段階から、
-
-**その建築の間で、人がどう暮らすのかを設計する段階**へ入りつつある。
+つまりSaadiyatは、世界的な文化施設を建てる段階から、その建築の間で、人がどう暮らすのかを設計する段階へ入りつつある。
 
 
 
@@ -148,7 +144,7 @@ Aldarは「Sei」を、日本語の**静けさや穏やかさ**に着想を得�
 
 それでも興味深いのは、世界的な美術館や大胆な建築が集まるSaadiyat Cultural Districtで、新しい住まいが求めている価値が、
 
-豪華さや大きさだけではなく、**「静けさ」**だということだ。
+豪華さや大きさだけではなく、**静けさ**だということだ。
 
 
 
@@ -196,11 +192,7 @@ https://www.instagram.com/p/DT-PpTIjEfq/
 
 **Sei Saadiyatは高級住宅として開発されており、文化を日常の中で享受できること自体が、住まいの付加価値として組み込まれている。**
 
-だからこそ、
-
-**文化は誰にとっての日常になるのか。**
-
-という問いも残る。
+だからこそ、文化は誰にとっての日常になるのか。という問いも残る。
 
 これは、世界各地の美術館が集まる地区や、文化・創造産業を軸にした街づくりでも繰り返し問われてきたテーマだ。
 
