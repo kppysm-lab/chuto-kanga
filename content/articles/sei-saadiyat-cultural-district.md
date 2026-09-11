@@ -4,17 +4,22 @@ title: Louvre Abu Dhabiの隣に住む。Saadiyatが「美術館の島」から�
 titleEn: "Living Next to the Louvre: Saadiyat Becomes a Cultural Neighbourhood"
 dek: 世界的な美術館が集まるSaadiyat Cultural Districtに、新しい住宅「Sei
   Saadiyat」が誕生する。文化を"見に行く"場所から、文化のそばで"暮らす"街へ――Abu Dhabiの次の都市像を考える。
+dekEn: With Sei Saadiyat, Abu Dhabi’s museum district is evolving from a
+  cultural destination into a place where art, architecture and everyday life
+  coexist.
 excerpt: >-
   Louvre Abu Dhabiをはじめ、世界的な文化施設が集まるSaadiyat Cultural Districtに、新たな住宅プロジェクト「Sei
   Saadiyat」が登場する。
 
-  美術館を訪れるための島から、文化を日常の風景として暮らす街へ。日本語の「静けさ」に着想を得たという"Sei"の思想や、日本の上野との違いから、Abu Dhabiが描く文化地区の次の姿を読み解く。
+  美術館を訪れるための島から、文化を日常の風景として暮らす街へ。日本語の「静けさ」に着想を得たという"Sei"の思想や、Abu Dhabiが描く文化地区の次の姿を読み解く。
+excerptEn: ""
 category: architecture-travel
 location: アブダビ、アラブ首長国連邦
 date: 2026-09-11
 author: 中東閑雅編集部
 heroImage: /images/articles/exterior-sei-saadiyat-in-saadiyat-cultural-district-by-aldar-royal-lounge-properties-5-1024x576.jpg.webp
-published: false
+featured: true
+published: true
 ---
 **美術館は、普通なら「出かける場所」だ。**
 
